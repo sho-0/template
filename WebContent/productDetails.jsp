@@ -17,6 +17,21 @@
 <div class = "main">
       <div class = "img">
       </div>
+      <div class = "itemData">
+            <h1>商品名</h1>
+            <div class = "price">
+            <h3>商品価格</h3>
+            </div>
+            <div class = "descriptionOfItem">
+            <h3>商品説明</h3>
+            </div>
+            <div class = "paymentButton">
+            <h3>購入方法確認画面</h3>
+            </div>
+            <div class = "homeButton">
+            <h3>ホームへ戻る</h3>
+           </div>
+      </div>
 </div>
 
 <!-- フッター ------------------------------>
