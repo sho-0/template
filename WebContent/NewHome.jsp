@@ -26,28 +26,13 @@
      <div class = "main">
            	<div class="main_img">
 		<div class="img">
-			<img src="img/aquamarine_hukusima.jpg" height="280" width="378">
+			<img src="img/kankou.jpg" height="280" width="378">
 		</div>
 		<div class="img">
-			<img src="img/hananukikeikoku.jpg" height="280" width="378">
+			<img src="img/soukou.jpg" height="280" width="378">
 		</div>
 		<div class="img">
-			<img src="img/iruka_watching_tour.jpg" height="280" width="378">
-		</div>
-		<div class="img">
-			<img src="img/mihuneyamarakuen.jpg" height="280" width="378">
-		</div>
-		<div class="img">
-			<img src="img/oirasekeiryu.jpg" height="280" width="378">
-		</div>
-		<div class="img">
-			<img src="img/nanbayasakazinja.jpg" height="280" width="378">
-		</div>
-		<div class="img">
-			<img src="img/sarugakyou_bungee.jpg" height="280" width="378">
-		</div>
-		<div class="img">
-			<img src="img/zundamochi.jpg" height="280" width="378">
+			<img src="img/kanzen.jpg" height="280" width="378">
 		</div>
 	</div>
 
@@ -55,7 +40,7 @@
 	<script>
 		$(function() {
 			$('.main_img').slick({
-				slidesToShow : 4,
+				slidesToShow : 1,
 				slidesToScroll : 1,
 				autoplay : true,
 				autoplaySpeed : 2000,
