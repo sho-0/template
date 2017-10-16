@@ -28,27 +28,31 @@
            <div class="main_img">
                  <div class="img">
                        <figure class="imghvr-fade">
-                             <img src="img/soukou.jpg">
+                             <img src="img/kankou.jpg" height="80%" width="80%">
                                    <figcaption>
-                                         // ホバー時のコンテンツ
+                                         観光目的に特化した、地図アプリになります。<br>
+                                         価格:!\xxxxxxxx
                                   </figcaption>
                                        <a href="#"></a>
                         </figure>
                 </div>
                 <div class="img">
                       <figure class="imghvr-fade">
-                            <img src="img/soukou.jpg">
+                            <img src="img/soukou.jpg" height="280" width="378">
                                   <figcaption>
-                                   // ホバー時のコンテンツ
+                                         走る楽しみに特化した、地図アプリになります。<br>
+                                         価格:!\xxxxxxxx
                                   </figcaption>
                                         <a href="#"></a>
                      </figure>
                 </div>
                 <div class="img">
                       <figure class="imghvr-fade">
-                            <img src="img/soukou.jpg">
+                            <img src="img/kanzen.jpg" height="280" width="378">
                                   <figcaption>
-                                  // ホバー時のコンテンツ
+                                        観光地図アプリと観光地図アプリ両方を兼ねそなえた<br>
+                                        アプリとなります。<br>
+                                        価格:!\xxxxxxxx
                                   </figcaption>
                                         <a href="#"></a>
                        </figure>
