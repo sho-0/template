@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="stylesheet" type="text/css" href="css/NewHome.css">
+<link rel="stylesheet" type="text/css" href="css/imagehover.css">
 <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="css/slick.css">
 
@@ -23,18 +24,36 @@
 	</header>
 
 <body>
-     <div class = "main">
-           	<div class="main_img">
-		<div class="img">
-			<img src="img/kankou.jpg" height="280" width="378">
-		</div>
-		<div class="img">
-			<img src="img/soukou.jpg" height="280" width="378">
-		</div>
-		<div class="img">
-			<img src="img/kanzen.jpg" height="280" width="378">
-		</div>
-	</div>
+      <div class = "main">
+           <div class="main_img">
+                 <div class="img">
+                       <figure class="imghvr-fade">
+                             <img src="img/soukou.jpg">
+                                   <figcaption>
+                                         // ホバー時のコンテンツ
+                                  </figcaption>
+                                       <a href="#"></a>
+                        </figure>
+                </div>
+                <div class="img">
+                      <figure class="imghvr-fade">
+                            <img src="img/soukou.jpg">
+                                  <figcaption>
+                                   // ホバー時のコンテンツ
+                                  </figcaption>
+                                        <a href="#"></a>
+                     </figure>
+                </div>
+                <div class="img">
+                      <figure class="imghvr-fade">
+                            <img src="img/soukou.jpg">
+                                  <figcaption>
+                                  // ホバー時のコンテンツ
+                                  </figcaption>
+                                        <a href="#"></a>
+                       </figure>
+                </div>
+      </div>
 
 		<!-- カルーセルスライドのオプション ----->
 	<script>
