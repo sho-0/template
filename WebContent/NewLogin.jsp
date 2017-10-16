@@ -6,17 +6,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/NewLogin.css">
-<title>峠之地図　電子版</title>
+<title>ログインフォーム</title>
 </head>
 <body>
-	<div id="header">
-	 	<div id="pr">
-		</div>
-	</div>
+	<!-- ヘッダー ------------------------------>
+	<header>
+		<jsp:include page="header.jsp" />
+	</header>
+
 	<div id="main">
-		<div id="top">
-			<p>Login</p>
-		</div>
+	<h1>Login</h1>
 		<div>
 			<h3>商品を購入する際にはログインをお願いします。</h3>
 			<s:form action="LoginAction">
@@ -31,9 +30,10 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer">
-	 	<div id="pr">
-		</div>
-	</div>
+
+	<!-- フッター ------------------------------>
+	<footer>
+		<jsp:include page="footer.jsp" />
+	</footer>
 </body>
 </html>
