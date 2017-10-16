@@ -18,17 +18,18 @@
 <title>峠地図　関東版</title>
 </head>
 
+
+<body>
 	<!-- ヘッダー ------------------------------>
 	<header>
 		<jsp:include page="header.jsp" />
 	</header>
 
-<body>
       <div class = "main">
            <div class="main_img">
                  <div class="img">
-                       <figure class="imghvr-fade">
-                             <img src="img/kankou.jpg" height="80%" width="80%">
+                       <figure class="imghvr-shutter-out-diag-1">
+                             <img src="img/kankou.jpg" height="200px" width="200px">
                                    <figcaption>
                                          観光目的に特化した、地図アプリになります。<br>
                                          価格:!\xxxxxxxx
@@ -37,8 +38,8 @@
                         </figure>
                 </div>
                 <div class="img">
-                      <figure class="imghvr-fade">
-                            <img src="img/soukou.jpg" height="280" width="378">
+                      <figure class= "imghvr-shutter-out-diag-1">
+                            <img src="img/soukou.jpg" height="200px" width="200px">
                                   <figcaption>
                                          走る楽しみに特化した、地図アプリになります。<br>
                                          価格:!\xxxxxxxx
@@ -47,8 +48,8 @@
                      </figure>
                 </div>
                 <div class="img">
-                      <figure class="imghvr-fade">
-                            <img src="img/kanzen.jpg" height="280" width="378">
+                      <figure class= "imghvr-shutter-out-diag-1">
+                            <img src="img/kanzen.jpg" height="200px" width="200px">
                                   <figcaption>
                                         観光地図アプリと観光地図アプリ両方を兼ねそなえた<br>
                                         アプリとなります。<br>
@@ -63,14 +64,31 @@
 	<script>
 		$(function() {
 			$('.main_img').slick({
-				slidesToShow : 1,
-				slidesToScroll : 1,
-				autoplay : true,
-				autoplaySpeed : 2000,
-				arrows : true,
-				dots : true,
+				centerMode: true,
+				  centerPadding: '60px',
+				  slidesToShow: 2,
+				  responsive: [
+				    {
+				      breakpoint: 768,
+				      settings: {
+				        arrows: false,
+				        centerMode: true,
+				        centerPadding: '40px',
+				        slidesToShow: 3
+				      }
+				    },
+				    {
+				      breakpoint: 480,
+				      settings: {
+				        arrows: false,
+				        centerMode: true,
+				        centerPadding: '40px',
+				        slidesToShow: 1
+				      }
+				    }
+				  ]
+				});
 			});
-		});
 	</script>
      </div>
 </body>
