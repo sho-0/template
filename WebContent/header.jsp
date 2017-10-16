@@ -9,9 +9,8 @@
 </head>
 <body>
 <div class="header_main">
-      <a href="NewHome.jsp"><img src="img/tougenotizu_title.jpg"></a>
+      <a href="NewHome.jsp"><img src="img/tougetizu.jpg"></a>
       <div class="welcome">
-            <h1>ようこそ</h1>
       </div>
 </div>
 </body>
