@@ -91,5 +91,10 @@
 			});
 	</script>
      </div>
+
+     	<!-- ヘッダー ------------------------------>
+	<footer>
+		<jsp:include page="footer.jsp" />
+	</footer>
 </body>
 </html>
