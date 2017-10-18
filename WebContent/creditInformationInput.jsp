@@ -8,7 +8,10 @@
 <link rel="stylesheet" type="text/css" href="css/productDetails.css">
 <title>クレジット情報入力画面</title>
 </head>
-<body>
 
+<body>
+      <div class = "main">
+            <div class = 
+      </div>
 </body>
 </html>
