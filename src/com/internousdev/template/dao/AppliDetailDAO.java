@@ -35,7 +35,7 @@ public class AppliDetailDAO {
 			while(rs.next()) {
 				dto.setId(rs.getInt("id"));
 				dto.setItem_name(rs.getString("item_name"));
-				dto.setPrice(rs.getBigDecimal("price"));
+				dto.setItem_price(rs.getBigDecimal("item_price"));
 				dto.setTheme(rs.getString("theme"));
 				dto.setComment(rs.getString("comment"));
 				dto.setImg(rs.getString("img"));
