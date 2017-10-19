@@ -27,17 +27,25 @@
 
       <div class = "main">
            <div class="main_img">
+                 <s:iterator value = "selectList">
                  <div class="img">
                        <figure class="imghvr-shutter-out-diag-1">
-                             <img src="img/kankou.jpg" height="200px" width="200px">
+                            <s:param name="id" value="%{1}"/><img
+                                  class="appli_img" src="<s:property value="img"/>" height="250px">
+                                    <input type=hidden value="id" />
                                    <figcaption>
-                                         観光目的に特化した、地図アプリになります。<br>
-                                         価格:!\xxxxxxxx
+                                         <div class = "item_price">
+                                               <s:param name="id" value="%{1}"/><s:property value="item_price"/><input type=hidden value="id" />
+                                        </div>
+                                        <div class = "comment">
+                                               <s:param name="id" value="%{1}"/><s:property value="comment"/><input type=hidden value="id" />
+                                        </div>
                                   </figcaption>
-                                       <a href="#"></a>
+                                       <a href='<s:url action="AppliDetailAction"></s:url>'></a>
                         </figure>
                 </div>
-                <div class="img">
+                </s:iterator>
+                  <!--  <div class="img">
                       <figure class= "imghvr-shutter-out-diag-1">
                             <img src="img/soukou.jpg" height="200px" width="200px">
                                   <figcaption>
@@ -57,7 +65,7 @@
                                   </figcaption>
                                         <a href="#"></a>
                        </figure>
-                </div>
+                </div>-->
       </div>
 
 		<!-- カルーセルスライドのオプション ----->
@@ -91,7 +99,12 @@
 			});
 	</script>
      </div>
-
+<!--<s:iterator value = "selectList">
+<a
+                                    href="<s:url action="AppliDetailAction"><s:param name="theme" value="%{map}"/></s:url>"><img
+                                    class="appli_img" src="<s:property value="img"/>" height="250px">
+                                    <input type=hidden value="id" /> </a>
+</s:iterator>-->
 <!-- フッター ------------------------------>
 	<footer>
 		<jsp:include page="footer.jsp" />

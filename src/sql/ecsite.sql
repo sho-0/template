@@ -8,7 +8,9 @@ drop table if exists item_info_transaction;
 create table item_info_transaction(
 id int not null primary key auto_increment,
 item_name varchar(30),
-item_price int,
+theme varchar(30),
+item_price int(11),
+comment varchar (100),
 img varchar (100) null default null,
 insert_date datetime,
 update_date datetime
@@ -26,11 +28,11 @@ insert_date datetime,
 update_date datetime
 );
 
-INSERT INTO item_info_transaction(item_name, item_price, img)
+INSERT INTO item_info_transaction(item_name,theme,item_price,comment,img)
 VALUES
-("観光", 2000,"img/kankou.jpg"),
-("走行", 2000,"img/soukou.jpg"),
-("完全", 4000,"img/kanzeni.jpg");
+("観光","map",2000,"観光に特化した、地図アプリになります。","img/kankou.jpg"),
+("走行","map",2000,"走る楽しみに特化した、地図アプリになります。","img/soukou.jpg"),
+("完全","map",4000,"観光地図アプリと走行地図アプリ、両方を合わせたアプリとなります。","img/kanzen.jpg");
 
 INSERT INTO credit(name_e,credit_number,security_code,id_number)
 VALUES

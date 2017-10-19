@@ -1,16 +1,31 @@
-package com.internousdev.template.dto;
+package com.internousdev.template.action;
 
 import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.template.dao.AppliDetailDAO;
+import com.internousdev.template.dto.AppliDTO;
+import com.opensymphony.xwork2.ActionSupport;
 
 
 
-/** ツアー情報に関するDTO
+/**
+ * ツアー詳細を表示するクラス
  * @author HINAKO HAGIWARA
  * @since 2017/09/13
- * @version 1.1
+ * @since 1.1
  */
 
-public class AppliDTO {
+public class AppliDetailAction extends ActionSupport implements SessionAware {
+
+	/**
+	 * シリアルID
+	 */
+	private static final long serialVersionUID = 1521502778776531460L;
 
 	/**
 	 * ツアーID
@@ -25,13 +40,13 @@ public class AppliDTO {
 	/**
 	 * 価格
 	 */
-	private BigDecimal item_price;
+	private BigDecimal price;
 
 	/**
 	 * 予約人数
 
-	private int persons;
-*/
+	private int persons;*/
+
 	/**
 	 * 出発地
 
@@ -62,10 +77,41 @@ public class AppliDTO {
 	 */
 	private String img;
 
-    /**
-     * ツアーリストから値を取得するためのインデックス番号
-     */
-    private int index;
+	/**
+    * ツアー一覧表示用リスト
+    */
+   private ArrayList<AppliDTO> displayList = new ArrayList<AppliDTO>();
+
+	/**
+	 * セッション
+	 */
+	private Map<String, Object> session;
+
+
+
+	/**
+	 * ツアー詳細を表示する実行メソッド
+	 * @author HINAKO HAGIWARA
+	 * @since 2017/09/13
+	 * @version 1.1
+	 */
+
+	public String execute() throws SQLException {
+		String result = ERROR;
+
+		AppliDetailDAO dao = new AppliDetailDAO();
+		displayList = dao.select(id);
+
+		if(displayList.size() != 0) {
+			this.item_name = displayList.get(0).getItem_name();
+			this.img = displayList.get(0).getImg();
+
+			result = SUCCESS;
+		}
+
+		return result;
+
+	}
 
 
 
@@ -105,16 +151,16 @@ public class AppliDTO {
 	 * 価格を取得するメソッド
 	 * @return price 価格
 	 */
-	public BigDecimal getItem_price() {
-		return item_price;
+	public BigDecimal getPrice() {
+		return price;
 	}
 
 	/**
 	 * 価格を格納するメソッド
 	 * @oaram price 価格
 	 */
-	public void setItem_price(BigDecimal item_price) {
-		this.item_price = item_price;
+	public void setPrice(BigDecimal price) {
+		this.price = price;
 	}
 
 	/**
@@ -230,19 +276,43 @@ public class AppliDTO {
 	}
 
     /**
-     * ツアーリストから値を取得するためのインデックス番号を取得するメソッド
-     * @return index ツアーリストから値を取得するためのインデックス番号
+     * 商品一覧表示用リストを取得するメソッド
+     * @return displayList 商品一覧表示用リスト
      */
-    public int getIndex() {
-        return index;
+    public ArrayList<AppliDTO> getDisplayList() {
+        return displayList;
     }
 
     /**
-     * ツアーリストから値を取得するためのインデックス番号を格納するメソッド
-     * @param index ツアーリストから値を取得するためのインデックス番号
+     * 商品一覧表示用リストを格納するメソッド
+     * @param displayList 商品一覧表示用リスト
      */
-    public void setIndex(int index) {
-        this.index = index;
+    public void setDisplayList(ArrayList<AppliDTO> displayList) {
+        this.displayList = displayList;
+    }
+
+    /**
+     * セッションを取得するメソッド
+     * @return session セッション
+     */
+    public Map<String, Object> getSession() {
+        return session;
+    }
+
+    /**
+     * セッションを格納するメソッド
+     * @param session セッション
+     */
+    public void setSession(Map<String, Object> session) {
+        this.session = session;
+    }
+
+    /**
+     * シリアルIDを取得するメソッド
+     * @return serialversionuid シリアルID
+     */
+    public static long getSerialversionuid() {
+        return serialVersionUID;
     }
 
 }

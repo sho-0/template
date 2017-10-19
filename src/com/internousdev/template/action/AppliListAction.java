@@ -22,14 +22,14 @@ public class AppliListAction extends ActionSupport {
 	private static final long serialVersionUID = -2317378109140954249L;
 
 	/**
-     * ツアーID
+     * アプリID
      */
-    private int tour_id;
+    private int id;
 
     /**
-     * ツアー名
+     * アプリ名
      */
-    private String tour_name;
+    private String item_name;
 
     /**
      * テーマ
@@ -38,9 +38,10 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 地方
-     */
+
     private String region;
 
+ */
     /**
      * 価格
      */
@@ -50,6 +51,11 @@ public class AppliListAction extends ActionSupport {
      * 画像パス
      */
     private String img;
+
+    /**
+     * 商品詳細
+     */
+    private String comment;
 
     /**
      * サーチリスト
@@ -65,13 +71,16 @@ public class AppliListAction extends ActionSupport {
      */
     public String execute() throws IllegalAccessException, InstantiationException{
         String result=ERROR;
+        System.out.println(id);
 
         AppliListDAO dao =new AppliListDAO();
 
-        selectList=dao.display(theme,region);
+        selectList=dao.display(id);
 
         if(selectList.size()>0){
             result=SUCCESS;
+
+            System.out.println(img);
         }
         return result;
     }
@@ -81,32 +90,32 @@ public class AppliListAction extends ActionSupport {
      * ツアーIDを取得するメソッド
      * @return item_id 商品ID
      */
-    public int getTour_id() {
-        return tour_id;
+    public int getId() {
+        return id;
     }
 
     /**
      * ツアーIDを格納するメソッド
      * @param tour_id ツアーID
      */
-    public void setTour_id(int tour_id) {
-        this.tour_id = tour_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
      * ツアー名を取得するメソッド
      * @return tourName ツアー名
      */
-    public String getTour_name() {
-        return tour_name;
+    public String getItem_name() {
+        return item_name;
     }
 
     /**
      * ツアー名を格納するメソッド
      * @param tour_name ツアー名
      */
-    public void setTour_name(String tour_name) {
-        this.tour_name = tour_name;
+    public void setItem_name(String item_name) {
+        this.item_name = item_name;
     }
 
     /**
@@ -128,23 +137,23 @@ public class AppliListAction extends ActionSupport {
     /**
      * テーマを取得するメソッド
      * @return thema テーマ
-     */
+
     public String getRegion() {
         return region;
-    }
+    }*/
 
     /**
      * 地方を格納するメソッド
      * @param region 地方
-     */
+
     public void setRegion(String region) {
         this.region = region;
-    }
+    }*/
 
     /**
      * 地方を格納するメソッド
-     * @param region 地方
-     */
+     * @param region 地方*/
+
     public int getPrice() {
         return price;
     }
@@ -173,6 +182,21 @@ public class AppliListAction extends ActionSupport {
         this.img = img;
     }
 
+    /**
+     * 商品詳細を取得するメソッド
+     * @return img 画像パス
+     */
+    public String getComment() {
+        return comment;
+    }
+
+    /**
+     * 商品詳細を格納するメソッド
+     * @param img 画像パス
+     */
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
     /**
      * セレクトリストを取得するメソッド
      * @return selectList セレクトリスト

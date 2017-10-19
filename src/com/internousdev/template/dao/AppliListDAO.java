@@ -20,18 +20,10 @@ public class AppliListDAO {
 
     ArrayList<AppliDTO> selectList=new ArrayList<AppliDTO>();
 
-    public ArrayList<AppliDTO> display(String theme, String region) throws IllegalAccessException, InstantiationException{
+    public ArrayList<AppliDTO> display(int id) throws IllegalAccessException, InstantiationException{
 
 
     	/*テーマで検索されるとエリアが、エリアが入力されるとテーマが未入力のままアクションが動いてしまうので、空白を入れておきます*/
-    	if(theme == null){
-    		theme = "";
-    	}
-
-    	if(region == null){
-    		region = "";
-    	}
-
 
         try{
 
@@ -42,27 +34,39 @@ public class AppliListDAO {
             /*実行してもらうSQL分の、すでに決まっている部分を先に書いておきます*/
             /*テーマとエリアの部分だけは、お客さんが何を選ぶかによって変わるので、もう少しあとで決まります。*/
             /*（？の部分は、空欄、とイメージしてもらえるとわかりやすいかも）*/
-            String sql = "select tour_id,tour_name,price,img from tour where theme like ? and region like ?";
+
+            String sql = "select id,item_name,item_price,comment,img from item_info_transaction";
 
             /*↓psさんに、上で書いたSQL文をあげておつかいを頼むイメージです*/
             PreparedStatement ps= con.prepareStatement(sql);
 
-            /*ここで初めて、お客さんが選んだ（＝入力した）テーマとエリアの内容を、psの持っているSQL文に書き足します*/
-            ps.setString(1, "%" + theme + "%");
-            ps.setString(2, "%" + region + "%");
+            if(id > 0){
+            	sql = "select id,item_name,item_price,comment,img from item_info_transaction where id = ?";
+                /*ここで初めて、お客さんが選んだ（＝入力した）テーマとエリアの内容を、psの持っているSQL文に書き足します*/
+                ps.setInt(1,  id );
+            }
+
 
             /*psに、DBの中におつかいに行ってもらい、rsという入れ物に中身を入れて届けてもらうイメージです。*/
             ResultSet rs=ps.executeQuery();
 
             while (rs.next()) {
             	AppliDTO dto= new AppliDTO();
-                dto.setTour_id(rs.getInt("tour_id"));
-                dto.setTour_name(rs.getString("tour_name"));
-                dto.setPrice(rs.getBigDecimal("price"));
+                dto.setId(rs.getInt("id"));
+                dto.setItem_name(rs.getString("item_name"));
+                dto.setItem_price(rs.getBigDecimal("item_price"));
+                dto.setComment(rs.getString("comment"));
                 dto.setImg(rs.getString("img"));
+                System.out.println("取得ID："+ dto.getId());
+                System.out.println("取得アイテム名：" + dto.getItem_name());
+                System.out.println("取得価格：" + dto.getItem_price());
+                System.out.println("商品詳細：" + dto.getComment());
+                System.out.println("取得画像パス：" + dto.getImg());
 
                 selectList.add(dto);
                 }
+
+            System.out.println("全取得データ数：" + selectList.size());
 
             rs.close();
             ps.close();
