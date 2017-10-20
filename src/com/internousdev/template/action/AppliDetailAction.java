@@ -40,26 +40,22 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 価格
 	 */
-	private BigDecimal price;
+	private BigDecimal item_price;
 
 	/**
 	 * 予約人数
-
 	private int persons;*/
 
 	/**
 	 * 出発地
-
 	private String departure;*/
 
 	/**
 	 * 地方
-
 	private String region;*/
 
 	/**
 	 * 都道府県
-
 	private String prefectures;*/
 
 	/**
@@ -135,7 +131,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	 * ツアー名を取得するメソッド
 	 * @return tour_name ツアー名
 	 */
-	public String getItem_name() {
+	public String getIm_name() {
 		return item_name;
 	}
 
@@ -151,22 +147,21 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	 * 価格を取得するメソッド
 	 * @return price 価格
 	 */
-	public BigDecimal getPrice() {
-		return price;
+	public BigDecimal getItem_price() {
+		return item_price;
 	}
 
 	/**
 	 * 価格を格納するメソッド
 	 * @oaram price 価格
 	 */
-	public void setPrice(BigDecimal price) {
-		this.price = price;
+	public void setItem_price(BigDecimal item_price) {
+		this.item_price = item_price;
 	}
 
 	/**
 	 * 予約人数を取得するメソッド
 	 * @return persons 予約人数
-
 	public int getPersons() {
 		return persons;
 	}*/
@@ -174,7 +169,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 予約人数を格納するメソッド
 	 * @param persons 予約人数
-
 	public void setPersons(int persons) {
 		this.persons = persons;
 	}*/
@@ -182,7 +176,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 出発地を取得するメソッド
 	 * @return departure 出発地
-
 	public String getDeparture() {
 		return departure;
 	}*/
@@ -190,7 +183,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 出発地を格納するメソッド
 	 * @param departure 出発地
-
 	public void setDeparture(String departure) {
 		this.departure = departure;
 	}*/
@@ -198,7 +190,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 地方を取得するメソッド
 	 * @return region 地方
-
 	public String getRegion() {
 		return region;
 	}*/
@@ -206,7 +197,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 地方を格納するメソッド
 	 * @oaram region 地方
-
 	public void setRegion(String region) {
 		this.region = region;
 	}*/
@@ -214,7 +204,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 都道府県を取得するメソッド
 	 * @return prefectures 都道府県
-
 	public String getPrefectures() {
 		return prefectures;
 	}*/
@@ -222,7 +211,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
 	 * 都道府県を格納するメソッド
 	 * @param prefectures 都道府県
-
 	public void setPrefectures(String prefectures) {
 		this.prefectures = prefectures;
 	}*/

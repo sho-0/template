@@ -70,16 +70,16 @@ method= "execute">
       <result name="error">NewHome.jsp</result>
     </action>
 
-		<!-- BuyItemConfirmAction
+		<!-- BuyItemConfirmAction-->
 		<action name="BuyItemConfirmAction" class="com.internousdev.template.action.BuyItemConfirmAction" method="execute">
 			<result name="success">buyItemComplate.jsp</result>
 			<result name="back">buyItem.jsp</result>
-		</action>-->
+		</action>
 
-		<!-- BuyItemComplateAction
+		<!-- BuyItemComplateAction-->
 		<action name="BuyItemComplateAction" class="com.internousdev.template.action.BuyItemComplateAction" method="execute">
 			<result name="success">payComp.jsp</result>
-		</action>-->
+		</action>
 
 		<!-- MyPageAction(削除かも)
 		<action name="MyPageAction" class="com.internousdev.template.action.MyPageAction" method="execute">

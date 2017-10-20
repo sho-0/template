@@ -41,7 +41,7 @@
                                                <s:param name="id" value="%{1}"/><s:property value="comment"/><input type=hidden value="id" />
                                         </div>
                                   </figcaption>
-                                       <a href='<s:url action="AppliDetailAction"></s:url>'></a>
+                                       <a href='<s:url action="AppliDetailAction"><s:param name="id" value="id"/></s:url>'></a>
                         </figure>
                 </div>
                 </s:iterator>

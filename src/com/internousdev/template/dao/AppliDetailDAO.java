@@ -24,8 +24,8 @@ public class AppliDetailDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		AppliDTO dto = new AppliDTO();
-		ArrayList<AppliDTO> appliList = new ArrayList<AppliDTO>();
-		String sql = "SELECT * FROM item_info_transaction where id=?";
+		ArrayList<AppliDTO> tourList = new ArrayList<AppliDTO>();
+		String sql = "SELECT * FROM item_info_transaction WHERE id = ?";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -39,7 +39,13 @@ public class AppliDetailDAO {
 				dto.setTheme(rs.getString("theme"));
 				dto.setComment(rs.getString("comment"));
 				dto.setImg(rs.getString("img"));
-				appliList.add(dto);
+				System.out.println("取得ID："+ dto.getId());
+                System.out.println("取得アイテム名：" + dto.getItem_name());
+                System.out.println("取得価格：" + dto.getItem_price());
+                System.out.println("商品詳細：" + dto.getComment());
+                System.out.println("取得画像パス：" + dto.getImg());
+
+				tourList.add(dto);
 
 			}
 
@@ -55,7 +61,7 @@ public class AppliDetailDAO {
 			}
 		}
 
-		return appliList;
+		return tourList;
 
 	}
 
