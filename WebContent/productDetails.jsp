@@ -13,26 +13,29 @@
 	<header>
 		<jsp:include page="header.jsp" />
 	</header>
-
+<s:iterator value = "selectList">
 <div class = "main">
       <div class = "img">
+            <s:param name="id" value="%{1}"/><img class="appli_img" src="<s:property value="img" />" height="250px" width="250px">
+                  <input type=hidden value="id" />
       </div>
       <div class = "itemData">
-            <h1>商品名</h1>
+            <h1><s:param name="id" value="%{1}"/><s:property value="item_name"/><input type=hidden value="id" /></h1>
             <div class = "price">
-            <h3>商品価格</h3>
+            <h3><s:param name="id" value="%{1}"/><s:property value="item_price"/><input type=hidden value="id" /></h3>
             </div>
             <div class = "descriptionOfItem">
-            <h3>商品説明</h3>
+            <h3><s:param name="id" value="%{1}"/><s:property value="comment"/><input type=hidden value="id" /></h3>
             </div>
             <div class = "paymentButton">
-            <h3>購入方法確認画面</h3>
+            <h3><h3><a href='<s:url action="BuyItemAction"></s:url>'><s:text name="購入する"/></a></h3></h3>
             </div>
             <div class = "homeButton">
-            <h3>ホームへ戻る</h3>
+            <h3><a href='<s:url action="CheckCreditAction"></s:url>'><s:text name="商品一覧へ戻る"/></a></h3>
            </div>
       </div>
 </div>
+</s:iterator>
 
 <!-- フッター ------------------------------>
 	<footer>

@@ -24,7 +24,7 @@ public class AppliDetailDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		AppliDTO dto = new AppliDTO();
-		ArrayList<AppliDTO> tourList = new ArrayList<AppliDTO>();
+		ArrayList<AppliDTO>  selectList = new ArrayList<AppliDTO>();
 		String sql = "SELECT * FROM item_info_transaction WHERE id = ?";
 
 		try {
@@ -45,7 +45,7 @@ public class AppliDetailDAO {
                 System.out.println("商品詳細：" + dto.getComment());
                 System.out.println("取得画像パス：" + dto.getImg());
 
-				tourList.add(dto);
+                selectList.add(dto);
 
 			}
 
@@ -61,7 +61,7 @@ public class AppliDetailDAO {
 			}
 		}
 
-		return tourList;
+		return selectList;
 
 	}
 

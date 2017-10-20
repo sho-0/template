@@ -20,7 +20,7 @@ drop table if exists credit;
 
 create table credit(
 id int not null primary key auto_increment,
-name_e varchar(50),
+credit_name varchar(50),
 credit_number varchar (16),
 security_code varchar (4),
 id_number varchar (4),
@@ -34,7 +34,7 @@ VALUES
 ("走行","map",2000,"走る楽しみに特化した、地図アプリになります。","img/soukou.jpg"),
 ("完全","map",4000,"観光地図アプリと走行地図アプリ、両方を合わせたアプリとなります。","img/kanzen.jpg");
 
-INSERT INTO credit(name_e,credit_number,security_code,id_number)
+INSERT INTO credit(credit_name,credit_number,security_code,id_number)
 VALUES
 ("sample1","1111111111111111","1111","1111"),
 ("sample2","2222222222222222","2222","2222"),

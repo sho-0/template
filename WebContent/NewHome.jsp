@@ -31,7 +31,7 @@
                  <div class="img">
                        <figure class="imghvr-shutter-out-diag-1">
                             <s:param name="id" value="%{1}"/><img
-                                  class="appli_img" src="<s:property value="img"/>" height="250px">
+                                  class="appli_img" src="<s:property value="img"/>" height="200px" width="200px">
                                     <input type=hidden value="id" />
                                    <figcaption>
                                          <div class = "item_price">

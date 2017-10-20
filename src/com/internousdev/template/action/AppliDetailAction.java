@@ -76,7 +76,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	/**
     * ツアー一覧表示用リスト
     */
-   private ArrayList<AppliDTO> displayList = new ArrayList<AppliDTO>();
+   private ArrayList<AppliDTO>  selectList = new ArrayList<AppliDTO>();
 
 	/**
 	 * セッション
@@ -96,11 +96,11 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 		String result = ERROR;
 
 		AppliDetailDAO dao = new AppliDetailDAO();
-		displayList = dao.select(id);
+		 selectList = dao.select(id);
 
-		if(displayList.size() != 0) {
-			this.item_name = displayList.get(0).getItem_name();
-			this.img = displayList.get(0).getImg();
+		if( selectList.size() != 0) {
+			this.item_name =  selectList.get(0).getItem_name();
+			this.img =  selectList.get(0).getImg();
 
 			result = SUCCESS;
 		}
@@ -267,16 +267,16 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
      * 商品一覧表示用リストを取得するメソッド
      * @return displayList 商品一覧表示用リスト
      */
-    public ArrayList<AppliDTO> getDisplayList() {
-        return displayList;
+    public ArrayList<AppliDTO> getSelectList() {
+        return  selectList;
     }
 
     /**
      * 商品一覧表示用リストを格納するメソッド
      * @param displayList 商品一覧表示用リスト
      */
-    public void setDisplayList(ArrayList<AppliDTO> displayList) {
-        this.displayList = displayList;
+    public void setSelectList(ArrayList<AppliDTO> selectList) {
+        this. selectList =  selectList;
     }
 
     /**
