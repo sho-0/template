@@ -28,10 +28,10 @@
             <h3><s:param name="id" value="%{1}"/><s:property value="comment"/><input type=hidden value="id" /></h3>
             </div>
             <div class = "paymentButton">
-            <h3><h3><a href='<s:url action="BuyItemAction"></s:url>'><s:text name="購入する"/></a></h3></h3>
+            <h3><h3><a href='<s:url action="GoCheckCreditAction"></s:url>'><s:text name="購入する"/></a></h3></h3>
             </div>
             <div class = "homeButton">
-            <h3><a href='<s:url action="CheckCreditAction"></s:url>'><s:text name="商品一覧へ戻る"/></a></h3>
+            <h3><a href='<s:url action="GoHomeAction"></s:url>'><s:text name="商品一覧へ戻る"/></a></h3>
            </div>
       </div>
 </div>

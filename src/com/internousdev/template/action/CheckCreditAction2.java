@@ -20,22 +20,22 @@ public class CheckCreditAction2 extends ActionSupport implements SessionAware{
 	/**
 	 * クレジット会社
 	 */
-	private String creditName;
+	private String credit_name;
 
 	/**
 	 * クレジット番号
 	 */
-	private int creditNumber;
+	private String credit_number;
 
 	/**
 	 * セキュリティ番号
 	 */
-	private int securityCode;
+	private String security_code;
 
 	/**
 	 * IDナンバー
 	 */
-	private int idNumber;
+	private String id_number;
 
 	/**
 	 * セッション情報
@@ -43,82 +43,106 @@ public class CheckCreditAction2 extends ActionSupport implements SessionAware{
 	private Map<String,Object>session;
 
 	public String execute(){
+		System.out.println(credit_name);
+		System.out.println(credit_number);
+		System.out.println(security_code);
+		System.out.println(id_number);
 		String result = ERROR;
 		CreditDAO dao = new CreditDAO();
 		CreditDTO dto = new CreditDTO();
 
-		dto = dao.select(creditName,creditNumber,securityCode,idNumber);
+		long credit_number_lomg = Long.parseLong(credit_number);
+		int security_code_int = Integer.parseInt(security_code);
+		int id_number_int = Integer.parseInt(id_number);
 
-		if(creditName.equals(dto.getCreditName()) && creditNumber== dto.getCreditNumber()
-				&& securityCode == dto.getSecurityCode() && idNumber == dto.getIdNumber()){
+
+		dto = dao.select(credit_name,credit_number,security_code,id_number);
+
+		System.out.println(dto.getCredit_name());
+		System.out.println(dto.getCredit_number());
+		System.out.println(dto.getSecurity_code());
+		System.out.println(dto.getId_number());
+
+		if(credit_name.equals(dto.getCredit_name()) && credit_number== dto.getCredit_number()
+				&& security_code == dto.getSecurity_code() && id_number == dto.getId_number()){
 			result = SUCCESS;
-		}
 	}
-	session.put("Name",dto.getCreditName());
+	session.put("credit_name",dto.getCredit_name());
+	session.put("credit_number",dto.getCredit_number());
+	session.put("securityc_code",dto.getSecurity_code());
+	session.put("id_number",dto.getId_number());
+	System.out.println(result);
 	return result;
 }
 
-/**
- * クレジット会社名を取得
- * @return creditNam クレジット会社名
- */
-public String getCreditName(){
-	return creditName;
-}
+	/**
+	 * @return credit_name
+	 */
+	public String getCredit_name() {
+		return credit_name;
+	}
 
-/**
- * クレジット会社名を格納
- * @param creditName クレジット会社名
- */
-public void setCreditName(String creditName){
-	this.creditName = creditName;
-}
+	/**
+	 * @param credit_name セットする credit_name
+	 */
+	public void setCredit_name(String credit_name) {
+		this.credit_name = credit_name;
+	}
 
-/**
- * クレジット番号を取得
- * @return creditNumber クレジット番号
- */
-public int getCreditNumber(){
-	return creditNumber;
-}
+	/**
+	 * @return credit_number
+	 */
+	public String getCredit_number() {
+		return credit_number;
+	}
 
-/**
- * クレジット番号を格納
- * @param creditNumber クレジット番号
- */
-public void setCreditNumber(int creditNumber){
-	this.creditNumber = creditNumber;
-}
+	/**
+	 * @param credit_number セットする credit_number
+	 */
+	public void setCredit_number(String credit_number) {
+		this.credit_number = credit_number;
+	}
 
-/**
- * セキュリティ番号を取得
- * @return securityCode セキュリティ番号
- */
-public int getSecurityCode(){
-	return securityCode;
-}
+	/**
+	 * @return security_code
+	 */
+	public String getSecurity_code() {
+		return security_code;
+	}
 
-/**
- * セキュリティ番号を格納
- * @param securityCode セキュリティ番号
- */
-public void setSecurityCode(int securityCode){
-	this.securityCode = securityCode;
-}
+	/**
+	 * @param security_code セットする security_code
+	 */
+	public void setSecurity_code(String security_code) {
+		this.security_code = security_code;
+	}
 
-/**
- * iDナンバーを取得
- * @return idNumber IDナンバー
- */
-public int getIdNumber(){
-	return idNumber;
-}
+	/**
+	 * @return id_number
+	 */
+	public String getId_number() {
+		return id_number;
+	}
 
-/**
- * IDナンバーを格納
- * @param idNumber IDナンバー
- */
-public void setIdNumber(int idNumber){
-	this.idNumber = idNumber;
-}
+	/**
+	 * @param id_number セットする id_number
+	 */
+	public void setId_number(String id_number) {
+		this.id_number = id_number;
+	}
+
+	/**
+	 * @return session
+	 */
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	/**
+	 * @param session セットする session
+	 */
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
 }

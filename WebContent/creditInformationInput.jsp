@@ -10,8 +10,12 @@
 </head>
 
 <body>
-      <div class = "main">
-            <div class = 
-      </div>
+      <s:form action = "CheckCreditAction2">
+            <s:textfield name = "credit_name" />
+            <s:textfield name  = "credit_number" />
+            <s:textfield name  = "security_code" />
+            <s:textfield name  = "id_number" />
+            <s:submit value = "購入する" />
+      </s:form>
 </body>
 </html>

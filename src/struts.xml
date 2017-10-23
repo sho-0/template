@@ -27,24 +27,24 @@ method= "execute">
 <result name="error">error.jsp</result>
 </action>
 
-		<!-- HomeAction(削除かも)
+		<!-- HomeAction(削除かも)-->
 		<action name="HomeAction" class="com.internousdev.template.action.HomeAction" method="execute">
-			<result name="login">login.jsp</result>
+			<result name="login">welcome.jsp</result>
 			<result name="success">buyItem.jsp</result>
-		</action>-->
+		</action>
 
-		<!-- LoginAction(削除かも)
+		<!-- LoginAction(削除かも)-->
 		<action name="LoginAction" class="com.internousdev.template.action.LoginAction" method="execute">
-			<result name="success">buyItem.jsp</result>
+			<result name="success">creditInformationInput.jsp</result>
 			<result name="create">userCreate.jsp</result>
 			<result name="error">login.jsp</result>
-		</action>-->
+		</action>
 
-		<!-- UserCreateAction(削除かも)
-		<action name="UserCreateAction" class="com.internousdev.template.action.UserCreateAction" method="execute">
-			<result name="success">userCreate.jsp</result>
+		<!-- クレジット入力画面へ-->
+		<action name="GoCheckCreditAction" class="com.internousdev.template.action.GoCheckCreditAction" method="execute">
+			<result name="success">creditInformationInput.jsp</result>
 			<result name="back">login.jsp</result>
-		</action>-->
+		</action>
 
 		<!-- UserCreateConfirmAction(削除かも)
 		<action name="UserCreateConfirmAction" class="com.internousdev.template.action.UserCreateConfirmAction" method="execute">
@@ -57,24 +57,24 @@ method= "execute">
 			<result name="success">userCreateComplate.jsp</result>
 		</action>-->
 
-		<!-- BuyItemAction -->
+		<!--BuyItemAction
 		<action name="BuyItemAction" class="com.internousdev.template.action.BuyItemAction" method="execute">
 			<result name="success">creditInformationInput.jsp</result>
 			<result name="error">NewHome.jsp</result>
-		</action>
+		</action>-->
 
-		<!-- クレジットカード情報入力アクション(が必要かも?) -->
-		<action name="CheckCreditAction"
-      class="com.internousdev.template.action.CheckCreditAction" method="execute">
+		<!-- クレジットカード情報入力アクション(が必要かも?)-->
+		<action name="CheckCreditAction2"
+      class="com.internousdev.template.action.CheckCreditAction2" method="execute">
       <result name="success" >payComp.jsp</result>
       <result name="error">NewHome.jsp</result>
     </action>
 
-		<!-- BuyItemConfirmAction-->
+		<!-- BuyItemConfirmAction
 		<action name="BuyItemConfirmAction" class="com.internousdev.template.action.BuyItemConfirmAction" method="execute">
 			<result name="success">buyItemComplate.jsp</result>
 			<result name="back">buyItem.jsp</result>
-		</action>
+		</action>-->
 
 		<!-- BuyItemComplateAction-->
 		<action name="BuyItemComplateAction" class="com.internousdev.template.action.BuyItemComplateAction" method="execute">
