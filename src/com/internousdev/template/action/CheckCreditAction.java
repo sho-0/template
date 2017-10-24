@@ -12,9 +12,12 @@ import com.internousdev.template.dto.CreditDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * @author MASAHIO IZAWA
- *
+ * クレジットカード認証を実行クラス
+ * @author MASAHIRO IZAWA
+ * @since 2017/10/24
+ * @since 1.1
  */
+
 public class CheckCreditAction extends ActionSupport implements SessionAware{
 
 	/**
@@ -42,22 +45,20 @@ public class CheckCreditAction extends ActionSupport implements SessionAware{
 	 */
 	private Map<String,Object>session;
 
+	/**
+	 * クレジットカード認証を実行メソッド
+	 * @author MASAHIRO IZAWA
+	 * @since 2017/10/24
+	 * @version 1.1
+	 */
+
 	public String execute(){
-		System.out.println(credit_name);
-		System.out.println(credit_number);
-		System.out.println(security_code);
-		System.out.println(id_number);
 		String result = ERROR;
 		CreditDAO dao = new CreditDAO();
 		CreditDTO dto = new CreditDTO();
 
 
 		dto = dao.select(credit_name,credit_number,security_code,id_number);
-
-		System.out.println(dto.getCredit_name());
-		System.out.println(dto.getCredit_number());
-		System.out.println(dto.getSecurity_code());
-		System.out.println(dto.getId_number());
 
 		if(credit_name.equals(dto.getCredit_name()) && credit_number.equals(dto.getCredit_number())
 				&& security_code.equals(dto.getSecurity_code()) && id_number.equals(dto.getId_number())){
@@ -72,70 +73,80 @@ public class CheckCreditAction extends ActionSupport implements SessionAware{
 }
 
 	/**
-	 * @return credit_name
+	 * クレジット会社を取得
+	 * @return credit_name クレジット会社
 	 */
 	public String getCredit_name() {
 		return credit_name;
 	}
 
 	/**
-	 * @param credit_name セットする credit_name
+	 * クレジット会社を格納
+	 * @param credit_name クレジット会社
 	 */
 	public void setCredit_name(String credit_name) {
 		this.credit_name = credit_name;
 	}
 
 	/**
-	 * @return credit_number
+	 * クレジット番号を取得
+	 * @return credit_number クレジット番号
 	 */
 	public String getCredit_number() {
 		return credit_number;
 	}
 
 	/**
-	 * @param credit_number セットする credit_number
+	 * クレジット番号を格納
+	 * @param credit_number クレジット番号
 	 */
 	public void setCredit_number(String credit_number) {
 		this.credit_number = credit_number;
 	}
 
 	/**
-	 * @return security_code
+	 * セキュリティ番号を取得
+	 * @return security_code セキュリティ番号
 	 */
 	public String getSecurity_code() {
 		return security_code;
 	}
 
 	/**
-	 * @param security_code セットする security_code
+	 * セキュリティ番号を格納
+	 * @param security_code セキュリティ番号
 	 */
 	public void setSecurity_code(String security_code) {
 		this.security_code = security_code;
 	}
 
 	/**
-	 * @return id_number
+	 * IDナンバーを取得
+	 * @return id_number IDナンバー
 	 */
 	public String getId_number() {
 		return id_number;
 	}
 
 	/**
-	 * @param id_number セットする id_number
+	 * IDナンバーを格納
+	 * @param id_number IDナンバー
 	 */
 	public void setId_number(String id_number) {
 		this.id_number = id_number;
 	}
 
 	/**
-	 * @return session
+	 * セッション情報を取得
+	 * @return session セッション情報
 	 */
 	public Map<String, Object> getSession() {
 		return session;
 	}
 
 	/**
-	 * @param session セットする session
+	 * セッション情報を格納
+	 * @param session セッション情報
 	 */
 	public void setSession(Map<String, Object> session) {
 		this.session = session;

@@ -14,9 +14,9 @@ import com.opensymphony.xwork2.ActionSupport;
 
 
 /**
- * ツアー詳細を表示するクラス
- * @author HINAKO HAGIWARA
- * @since 2017/09/13
+ * 商品詳細を表示するクラス
+ * @author MASAHIRO IZAWA
+ * @since 2017/10/24
  * @since 1.1
  */
 
@@ -28,12 +28,12 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	private static final long serialVersionUID = 1521502778776531460L;
 
 	/**
-	 * ツアーID
+	 * 商品ID
 	 */
 	private int id;
 
 	/**
-	 * ツアー名
+	 * 商品名
 	 */
 	private String item_name;
 
@@ -41,22 +41,6 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	 * 価格
 	 */
 	private BigDecimal item_price;
-
-	/**
-	 * 予約人数
-	private int persons;*/
-
-	/**
-	 * 出発地
-	private String departure;*/
-
-	/**
-	 * 地方
-	private String region;*/
-
-	/**
-	 * 都道府県
-	private String prefectures;*/
 
 	/**
 	 * テーマ
@@ -74,7 +58,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	private String img;
 
 	/**
-    * ツアー一覧表示用リスト
+    * 商品詳細表示用リスト
     */
    private ArrayList<AppliDTO>  selectList = new ArrayList<AppliDTO>();
 
@@ -86,9 +70,9 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 
 	/**
-	 * ツアー詳細を表示する実行メソッド
-	 * @author HINAKO HAGIWARA
-	 * @since 2017/09/13
+	 * 商品詳細を表示する実行メソッド
+	 * @author MASAHIRO IZAWA
+	 * @since 2017/10/24
 	 * @version 1.1
 	 */
 
@@ -112,7 +96,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 
 	/**
-	 * ツアーIDを取得するメソッド
+	 * 商品IDを取得
 	 * @return tour_id ツアーID
 	 */
 	public int getId() {
@@ -120,7 +104,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * ツアーIDを格納するメソッド
+	 * 商品IDを格納
 	 * @param tour_id ツアーID
 	 */
 	public void setId(int id) {
@@ -128,7 +112,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * ツアー名を取得するメソッド
+	 * 商品名を取得
 	 * @return tour_name ツアー名
 	 */
 	public String getIm_name() {
@@ -136,7 +120,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * ツアー名を格納するメソッド
+	 * 商品名を格納
 	 * @param tour_name ツアー名
 	 */
 	public void setItem_name(String item_name) {
@@ -144,7 +128,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * 価格を取得するメソッド
+	 * 価格を取得
 	 * @return price 価格
 	 */
 	public BigDecimal getItem_price() {
@@ -152,7 +136,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * 価格を格納するメソッド
+	 * 価格を格納
 	 * @oaram price 価格
 	 */
 	public void setItem_price(BigDecimal item_price) {
@@ -160,63 +144,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * 予約人数を取得するメソッド
-	 * @return persons 予約人数
-	public int getPersons() {
-		return persons;
-	}*/
-
-	/**
-	 * 予約人数を格納するメソッド
-	 * @param persons 予約人数
-	public void setPersons(int persons) {
-		this.persons = persons;
-	}*/
-
-	/**
-	 * 出発地を取得するメソッド
-	 * @return departure 出発地
-	public String getDeparture() {
-		return departure;
-	}*/
-
-	/**
-	 * 出発地を格納するメソッド
-	 * @param departure 出発地
-	public void setDeparture(String departure) {
-		this.departure = departure;
-	}*/
-
-	/**
-	 * 地方を取得するメソッド
-	 * @return region 地方
-	public String getRegion() {
-		return region;
-	}*/
-
-	/**
-	 * 地方を格納するメソッド
-	 * @oaram region 地方
-	public void setRegion(String region) {
-		this.region = region;
-	}*/
-
-	/**
-	 * 都道府県を取得するメソッド
-	 * @return prefectures 都道府県
-	public String getPrefectures() {
-		return prefectures;
-	}*/
-
-	/**
-	 * 都道府県を格納するメソッド
-	 * @param prefectures 都道府県
-	public void setPrefectures(String prefectures) {
-		this.prefectures = prefectures;
-	}*/
-
-	/**
-	 * テーマを取得するメソッド
+	 * テーマを取得
 	 * @return theme テーマ
 	 */
 	public String getTheme() {
@@ -224,7 +152,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * テーマを格納するメソッド
+	 * テーマを格納
 	 * @param theme テーマ
 	 */
 	public void setTheme(String theme) {
@@ -232,7 +160,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * ツアー詳細文を取得するメソッド
+	 * 商品詳細文を取得
 	 * @return comment ツアー詳細文
 	 */
 	public String getComment() {
@@ -240,7 +168,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * ツアー詳細文を格納するメソッド
+	 * 商品詳細文を格納
 	 * @param comment ツアー詳細文
 	 */
 	public void setComment(String comment) {
@@ -248,7 +176,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * 画像パスを取得するメソッド
+	 * 画像パスを取得
 	 * @return img 画像パス
 	 */
 	public String getImg() {
@@ -256,7 +184,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
 	/**
-	 * 画像パスを格納するメソッド
+	 * 画像パスを格納
 	 * @param img 画像パス
 	 */
 	public void setImg(String img) {
@@ -264,7 +192,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 	}
 
     /**
-     * 商品一覧表示用リストを取得するメソッド
+     * 商品一覧表示用リストを取得
      * @return displayList 商品一覧表示用リスト
      */
     public ArrayList<AppliDTO> getSelectList() {
@@ -272,7 +200,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
     }
 
     /**
-     * 商品一覧表示用リストを格納するメソッド
+     * 商品一覧表示用リストを格納
      * @param displayList 商品一覧表示用リスト
      */
     public void setSelectList(ArrayList<AppliDTO> selectList) {
@@ -280,7 +208,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
     }
 
     /**
-     * セッションを取得するメソッド
+     * セッションを取得
      * @return session セッション
      */
     public Map<String, Object> getSession() {
@@ -288,7 +216,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
     }
 
     /**
-     * セッションを格納するメソッド
+     * セッションを格納
      * @param session セッション
      */
     public void setSession(Map<String, Object> session) {
@@ -296,7 +224,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
     }
 
     /**
-     * シリアルIDを取得するメソッド
+     * シリアルIDを取得
      * @return serialversionuid シリアルID
      */
     public static long getSerialversionuid() {

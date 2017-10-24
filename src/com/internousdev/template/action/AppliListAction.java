@@ -8,8 +8,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 商品一覧を表示するアクション
- * @author SHUN NAGAO
- * @since 2017/09/13
+ * @author MASAHIRO IZAWA
+ * @since 2017/10/24
  * @version 1.1
  */
 
@@ -22,12 +22,12 @@ public class AppliListAction extends ActionSupport {
 	private static final long serialVersionUID = -2317378109140954249L;
 
 	/**
-     * アプリID
+     * 商品ID
      */
     private int id;
 
     /**
-     * アプリ名
+     * 商品名
      */
     private String item_name;
 
@@ -36,12 +36,6 @@ public class AppliListAction extends ActionSupport {
      */
     private String theme;
 
-    /**
-     * 地方
-
-    private String region;
-
- */
     /**
      * 価格
      */
@@ -58,17 +52,18 @@ public class AppliListAction extends ActionSupport {
     private String comment;
 
     /**
-     * サーチリスト
+     * 商品一覧表示用リスト
      */
     public ArrayList<AppliDTO> selectList=new ArrayList<AppliDTO>();
 
 
-    /**
-     * 実行メソッド
-     * @return success or error
-     * @throws InstantiationException
-     * @throws IllegalAccessException
-     */
+	/**
+	 * 商品一覧を表示する実行メソッド
+	 * @author MASAHIRO IZAWA
+	 * @since 2017/10/24
+	 * @version 1.1
+	 */
+
     public String execute() throws IllegalAccessException, InstantiationException{
         String result=ERROR;
         System.out.println(id);
@@ -87,7 +82,7 @@ public class AppliListAction extends ActionSupport {
 
 
     /**
-     * ツアーIDを取得するメソッド
+     * 商品IDを取得
      * @return item_id 商品ID
      */
     public int getId() {
@@ -95,7 +90,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * ツアーIDを格納するメソッド
+     * 商品IDを格納
      * @param tour_id ツアーID
      */
     public void setId(int id) {
@@ -103,7 +98,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * ツアー名を取得するメソッド
+     * 商品名を取得
      * @return tourName ツアー名
      */
     public String getItem_name() {
@@ -111,7 +106,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * ツアー名を格納するメソッド
+     * 商品名を格納
      * @param tour_name ツアー名
      */
     public void setItem_name(String item_name) {
@@ -119,7 +114,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * テーマを取得するメソッド
+     * テーマを取得
      * @return thema テーマ
      */
     public String getTheme() {
@@ -127,7 +122,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * テーマを格納するメソッド
+     * テーマを格納
      * @param theme テーマ
      */
     public void setTheme(String theme) {
@@ -135,23 +130,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * テーマを取得するメソッド
-     * @return thema テーマ
-
-    public String getRegion() {
-        return region;
-    }*/
-
-    /**
-     * 地方を格納するメソッド
-     * @param region 地方
-
-    public void setRegion(String region) {
-        this.region = region;
-    }*/
-
-    /**
-     * 地方を格納するメソッド
+     * 価格を格納
      * @param region 地方*/
 
     public int getPrice() {
@@ -159,7 +138,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * 価格を格納するメソッド
+     * 価格を格納
      * @param price 価格
      */
     public void setPrice(int price) {
@@ -167,7 +146,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * 画像パスを取得するメソッド
+     * 画像パスを取得
      * @return img 画像パス
      */
     public String getImg() {
@@ -175,7 +154,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * 画像パスを格納するメソッド
+     * 画像パスを格納
      * @param img 画像パス
      */
     public void setImg(String img) {
@@ -183,7 +162,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * 商品詳細を取得するメソッド
+     * 商品詳細を取得
      * @return img 画像パス
      */
     public String getComment() {
@@ -191,14 +170,14 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * 商品詳細を格納するメソッド
+     * 商品詳細を格納
      * @param img 画像パス
      */
     public void setComment(String comment) {
         this.comment = comment;
     }
     /**
-     * セレクトリストを取得するメソッド
+     * 商品一覧表示用リストを取得
      * @return selectList セレクトリスト
      */
     public ArrayList<AppliDTO> getSelectList() {
@@ -206,7 +185,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * セレクトリストを格納するメソッド
+     * 商品一覧表示用リストを格納
      * @param selectList セレクトリスト
      */
     public void setSelectList(ArrayList<AppliDTO> selectList) {
@@ -214,7 +193,7 @@ public class AppliListAction extends ActionSupport {
     }
 
     /**
-     * シリアルIDを取得するメソッド
+     * シリアルIDを取得
      * @return serialversionuid シリアルID
      */
     public static long getSerialversionuid() {
