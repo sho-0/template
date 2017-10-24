@@ -66,7 +66,6 @@ public class AppliListAction extends ActionSupport {
 
     public String execute() throws IllegalAccessException, InstantiationException{
         String result=ERROR;
-        System.out.println(id);
 
         AppliListDAO dao =new AppliListDAO();
 
@@ -75,7 +74,6 @@ public class AppliListAction extends ActionSupport {
         if(selectList.size()>0){
             result=SUCCESS;
 
-            System.out.println(img);
         }
         return result;
     }

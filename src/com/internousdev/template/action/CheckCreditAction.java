@@ -68,7 +68,6 @@ public class CheckCreditAction extends ActionSupport implements SessionAware{
 	session.put("credit_number",dto.getCredit_number());
 	session.put("securityc_code",dto.getSecurity_code());
 	session.put("id_number",dto.getId_number());
-	System.out.println(result);
 	return result;
 }
 
