@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" type="text/css" href="css/NewHome.css">
+<link rel="stylesheet" type="text/css" href="css/appliList.css">
 <link rel="stylesheet" type="text/css" href="css/imagehover.css">
 <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="css/slick.css">
@@ -45,27 +45,7 @@
                         </figure>
                 </div>
                 </s:iterator>
-                  <!--  <div class="img">
-                      <figure class= "imghvr-shutter-out-diag-1">
-                            <img src="img/soukou.jpg" height="200px" width="200px">
-                                  <figcaption>
-                                         走る楽しみに特化した、地図アプリになります。<br>
-                                         価格:!\xxxxxxxx
-                                  </figcaption>
-                                        <a href="#"></a>
-                     </figure>
-                </div>
-                <div class="img">
-                      <figure class= "imghvr-shutter-out-diag-1">
-                            <img src="img/kanzen.jpg" height="200px" width="200px">
-                                  <figcaption>
-                                        観光地図アプリと観光地図アプリ両方を兼ねそなえた<br>
-                                        アプリとなります。<br>
-                                        価格:!\xxxxxxxx
-                                  </figcaption>
-                                        <a href="#"></a>
-                       </figure>
-                </div>-->
+
       </div>
 
 		<!-- カルーセルスライドのオプション ----->
@@ -73,38 +53,12 @@
 		$(function() {
 			$('.main_img').slick({
 				centerMode: true,
-				  centerPadding: '60px',
+				  centerPadding: '80px',
 				  slidesToShow: 2,
-				  responsive: [
-				    {
-				      breakpoint: 768,
-				      settings: {
-				        arrows: false,
-				        centerMode: true,
-				        centerPadding: '40px',
-				        slidesToShow: 3
-				      }
-				    },
-				    {
-				      breakpoint: 480,
-				      settings: {
-				        arrows: false,
-				        centerMode: true,
-				        centerPadding: '40px',
-				        slidesToShow: 1
-				      }
-				    }
-				  ]
 				});
 			});
 	</script>
      </div>
-<!--<s:iterator value = "selectList">
-<a
-                                    href="<s:url action="AppliDetailAction"><s:param name="theme" value="%{map}"/></s:url>"><img
-                                    class="appli_img" src="<s:property value="img"/>" height="250px">
-                                    <input type=hidden value="id" /> </a>
-</s:iterator>-->
 <!-- フッター ------------------------------>
 	<footer>
 		<jsp:include page="footer.jsp" />
