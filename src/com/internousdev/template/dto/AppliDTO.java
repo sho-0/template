@@ -4,21 +4,21 @@ import java.math.BigDecimal;
 
 
 
-/** ツアー情報に関するDTO
- * @author HINAKO HAGIWARA
- * @since 2017/09/13
+/** 商品情報に関するDTO
+ * @author MASAHIRO IZAWA
+ * @since 2017/10/24
  * @version 1.1
  */
 
 public class AppliDTO {
 
 	/**
-	 * ツアーID
+	 * 商品ID
 	 */
 	private int id;
 
 	/**
-	 * ツアー名
+	 * 商品名
 	 */
 	private String item_name;
 
@@ -26,26 +26,6 @@ public class AppliDTO {
 	 * 価格
 	 */
 	private BigDecimal item_price;
-
-	/**
-	 * 予約人数
-
-	private int persons;
-*/
-	/**
-	 * 出発地
-
-	private String departure;*/
-
-	/**
-	 * 地方
-
-	private String region;*/
-
-	/**
-	 * 都道府県
-
-	private String prefectures;*/
 
 	/**
 	 * テーマ
@@ -63,46 +43,46 @@ public class AppliDTO {
 	private String img;
 
     /**
-     * ツアーリストから値を取得するためのインデックス番号
+     * 商品リストから値を取得するためのインデックス番号
      */
     private int index;
 
 
 
 	/**
-	 * ツアーIDを取得するメソッド
-	 * @return tour_id ツアーID
+	 * 商品IDを取得するメソッド
+	 * @return tour_id 商品ID
 	 */
 	public int getId() {
 		return id;
 	}
 
 	/**
-	 * ツアーIDを格納するメソッド
-	 * @param tour_id ツアーID
+	 * 商品IDを格納
+	 * @param tour_id 商品ID
 	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
 	/**
-	 * ツアー名を取得するメソッド
-	 * @return tour_name ツアー名
+	 * 商品名を取得
+	 * @return tour_name 商品名
 	 */
 	public String getItem_name() {
 		return item_name;
 	}
 
 	/**
-	 * ツアー名を格納するメソッド
-	 * @param tour_name ツアー名
+	 * 商品名を格納
+	 * @param tour_name 商品名
 	 */
 	public void setItem_name(String item_name) {
 		this.item_name = item_name;
 	}
 
 	/**
-	 * 価格を取得するメソッド
+	 * 価格を取得
 	 * @return price 価格
 	 */
 	public BigDecimal getItem_price() {
@@ -110,7 +90,7 @@ public class AppliDTO {
 	}
 
 	/**
-	 * 価格を格納するメソッド
+	 * 価格を格納
 	 * @oaram price 価格
 	 */
 	public void setItem_price(BigDecimal item_price) {
@@ -118,71 +98,7 @@ public class AppliDTO {
 	}
 
 	/**
-	 * 予約人数を取得するメソッド
-	 * @return persons 予約人数
-
-	public int getPersons() {
-		return persons;
-	}*/
-
-	/**
-	 * 予約人数を格納するメソッド
-	 * @param persons 予約人数
-
-	public void setPersons(int persons) {
-		this.persons = persons;
-	}*/
-
-	/**
-	 * 出発地を取得するメソッド
-	 * @return departure 出発地
-
-	public String getDeparture() {
-		return departure;
-	}*/
-
-	/**
-	 * 出発地を格納するメソッド
-	 * @param departure 出発地
-
-	public void setDeparture(String departure) {
-		this.departure = departure;
-	}*/
-
-	/**
-	 * 地方を取得するメソッド
-	 * @return region 地方
-
-	public String getRegion() {
-		return region;
-	}*/
-
-	/**
-	 * 地方を格納するメソッド
-	 * @oaram region 地方
-
-	public void setRegion(String region) {
-		this.region = region;
-	}*/
-
-	/**
-	 * 都道府県を取得するメソッド
-	 * @return prefectures 都道府県
-
-	public String getPrefectures() {
-		return prefectures;
-	}*/
-
-	/**
-	 * 都道府県を格納するメソッド
-	 * @param prefectures 都道府県
-
-	public void setPrefectures(String prefectures) {
-		this.prefectures = prefectures;
-	}*/
-
-	/**
-	 * テーマを取得するメソッド
+	 * テーマを取得
 	 * @return theme テーマ
 	 */
 	public String getTheme() {
@@ -190,7 +106,7 @@ public class AppliDTO {
 	}
 
 	/**
-	 * テーマを格納するメソッド
+	 * テーマを格納
 	 * @param theme テーマ
 	 */
 	public void setTheme(String theme) {
@@ -198,23 +114,23 @@ public class AppliDTO {
 	}
 
 	/**
-	 * ツアー詳細文を取得するメソッド
-	 * @return comment ツアー詳細文
+	 * 詳細文を取得する
+	 * @return comment 詳細文
 	 */
 	public String getComment() {
 		return comment;
 	}
 
 	/**
-	 * ツアー詳細文を格納するメソッド
-	 * @param comment ツアー詳細文
+	 * 詳細文を格納
+	 * @param comment 詳細文
 	 */
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
 
 	/**
-	 * 画像パスを取得するメソッド
+	 * 画像パスを取得
 	 * @return img 画像パス
 	 */
 	public String getImg() {
@@ -222,7 +138,7 @@ public class AppliDTO {
 	}
 
 	/**
-	 * 画像パスを格納するメソッド
+	 * 画像パスを格納
 	 * @param img 画像パス
 	 */
 	public void setImg(String img) {
@@ -230,16 +146,16 @@ public class AppliDTO {
 	}
 
     /**
-     * ツアーリストから値を取得するためのインデックス番号を取得するメソッド
-     * @return index ツアーリストから値を取得するためのインデックス番号
+     * 商品リストから値を取得するためのインデックス番号を取得
+     * @return index 商品リストから値を取得するためのインデックス番号
      */
     public int getIndex() {
         return index;
     }
 
     /**
-     * ツアーリストから値を取得するためのインデックス番号を格納するメソッド
-     * @param index ツアーリストから値を取得するためのインデックス番号
+     * 商品リストから値を取得するためのインデックス番号を格納
+     * @param index 商品リストから値を取得するためのインデックス番号
      */
     public void setIndex(int index) {
         this.index = index;
