@@ -51,10 +51,6 @@ public class CheckCreditAction2 extends ActionSupport implements SessionAware{
 		CreditDAO dao = new CreditDAO();
 		CreditDTO dto = new CreditDTO();
 
-		long credit_number_lomg = Long.parseLong(credit_number);
-		int security_code_int = Integer.parseInt(security_code);
-		int id_number_int = Integer.parseInt(id_number);
-
 
 		dto = dao.select(credit_name,credit_number,security_code,id_number);
 
@@ -63,8 +59,8 @@ public class CheckCreditAction2 extends ActionSupport implements SessionAware{
 		System.out.println(dto.getSecurity_code());
 		System.out.println(dto.getId_number());
 
-		if(credit_name.equals(dto.getCredit_name()) && credit_number== dto.getCredit_number()
-				&& security_code == dto.getSecurity_code() && id_number == dto.getId_number()){
+		if(credit_name.equals(dto.getCredit_name()) && credit_number.equals(dto.getCredit_number())
+				&& security_code.equals(dto.getSecurity_code()) && id_number.equals(dto.getId_number())){
 			result = SUCCESS;
 	}
 	session.put("credit_name",dto.getCredit_name());
