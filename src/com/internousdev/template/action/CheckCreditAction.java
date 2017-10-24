@@ -1,268 +1,144 @@
+/**
+ *
+ */
 package com.internousdev.template.action;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.template.dto.BuyItemDTO;
-import com.internousdev.util.creditcard.manager.CreditUtil;
+import com.internousdev.template.dao.CreditDAO;
+import com.internousdev.template.dto.CreditDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * @author MASAHIO IZAWA
+ *
+ */
+public class CheckCreditAction extends ActionSupport implements SessionAware{
 
 	/**
-	 * クレジットカードの種類を判別し情報が正しいかチェックするクラス
-	 * @author SHUN NAGAO
-	 * @since 2017/09/22
-	 * @version 1.1
-	 *
+	 * クレジット会社
 	 */
-	public class CheckCreditAction extends ActionSupport implements SessionAware{
-		/**
-		 * シリアルID
-		 */
-		private static final long serialVersionUID = -6567654743580086515L;
-		/**
-		 * クレジット種類
-		 */
-		private int creditId;
-		/**
-		 * クレジット番号
-		 */
-		private String creditNumber;
-		/**
-		 * クレジット名義
-		 */
-		private String nameE;
-		/**
-		 * セキュリティコード
-		 */
-		private String securityCode;
-		/**
-		 * 有効期限（月）
-		 */
-		private int expirationMonth;
-		/**
-		 * 有効期限（年）
-		 */
-		private int expirationYear;
-		/**
-		 * セッション情報
-		 */
-		private Map<String,Object>session;
-		/**
-		 * エラーメッセージ
-		 */
-		private String errmsg1;
-		/**
-		 * クレジットブランド
-		 */
-		private String creditBrand;
+	private String credit_name;
 
-		private ArrayList<BuyItemDTO> cartList = new ArrayList<BuyItemDTO>();
+	/**
+	 * クレジット番号
+	 */
+	private String credit_number;
+
+	/**
+	 * セキュリティ番号
+	 */
+	private String security_code;
+
+	/**
+	 * IDナンバー
+	 */
+	private String id_number;
+
+	/**
+	 * セッション情報
+	 */
+	private Map<String,Object>session;
+
+	public String execute(){
+		System.out.println(credit_name);
+		System.out.println(credit_number);
+		System.out.println(security_code);
+		System.out.println(id_number);
+		String result = ERROR;
+		CreditDAO dao = new CreditDAO();
+		CreditDTO dto = new CreditDTO();
 
 
-		/**
-		 * 実行メソッド クレジットの種類を判別
-		 * @author SHUN NAGAO
-		 * @return ERROR SUCCESS
-		 * @since 2017/09/22
-		 * @version 1.1
-		 */
-		public String execute() {
-			System.out.println("カートリスト" + cartList);
+		dto = dao.select(credit_name,credit_number,security_code,id_number);
 
-			if(creditNumber.startsWith("4")){
-				creditId = 1;
-			}else if(creditNumber.startsWith("5")){
-				creditId = 2;
-			}else if(creditNumber.startsWith("3")){
-				creditId = 3;
-			}else{
-				errmsg1="*入力された情報に間違いがあります。";
-				return ERROR;
-			}
+		System.out.println(dto.getCredit_name());
+		System.out.println(dto.getCredit_number());
+		System.out.println(dto.getSecurity_code());
+		System.out.println(dto.getId_number());
 
-			if(creditId == 1){
-				creditBrand = "Visa";
-			}else if(creditId == 2){
-				creditBrand = "MasterCard";
-			}else if(creditId == 3){
-				creditBrand = "AmericanExpress";
-			}
-
-
-
-			CreditUtil util = new CreditUtil(creditId, creditNumber);
-			//クレジットカード番号上6ケタの照合
-			if(util.brandCheck()){
-				//クレジットカード番号16ケタ、セキュリティコード、有効期限、名義人の照合
-				if(util.creditCheck(securityCode, expirationYear, expirationMonth, nameE)){
-
-					return SUCCESS;
-
-				}else{
-					errmsg1="*入力された情報に間違いがあります。";
-					return ERROR;
-				}
-			}else{
-				errmsg1="*入力された情報に間違いがあります。";
-				return ERROR;
-			}
-		}
-
-
-
-		/**
-		 * エラーメッセージを取得するメソッド
-		 * @return errmsg1 エラーメッセージ
-		 */
-		public String getErrmsg1() {
-			return errmsg1;
-		}
-
-		/**
-		 * エラーメッセージを格納するメソッド
-		 * @param errmsg1 エラーメッセージ
-		 */
-		public void setErrmsg1(String errmsg1) {
-			this.errmsg1 = errmsg1;
-		}
-
-		/**
-		 * クレジット種類を取得するメソッド
-		 * @return creditId クレジット種類
-		 */
-		public int getCreditId() {
-			return creditId;
-		}
-
-		/**
-		 * クレジット種類を格納するメソッド
-		 * @param creditId クレジット種類
-		 */
-		public void setCreditId(int creditId) {
-			this.creditId = creditId;
-		}
-
-		/**
-		 * クレジット番号を取得するメソッド
-		 * @return creditNumber クレジット番号
-		 */
-		public String getCreditNumber() {
-			return creditNumber;
-		}
-
-		/**
-		 * クレジット番号を格納するメソッド
-		 * @param creditNumber クレジット番号
-		 */
-		public void setCreditNumber(String creditNumber) {
-			this.creditNumber = creditNumber;
-		}
-
-		/**
-		 * クレジット名義を取得するメソッド
-		 * @return nameE クレジット名義
-		 */
-		public String getNameE() {
-			return nameE;
-		}
-
-		/**
-		 * クレジット名義を格納するメソッド
-		 * @param nameE クレジット名義
-		 */
-		public void setNameE(String nameE) {
-			this.nameE = nameE;
-		}
-
-		/**
-		 * セキュリティコードを取得するメソッド
-		 * @return securityCode セキュリティコード
-		 */
-		public String getSecurityCode() {
-			return securityCode;
-		}
-
-		/**
-		 * セキュリティコードを格納するメソッド
-		 * @param securityCode セキュリティコード
-		 */
-		public void setSecurityCode(String securityCode) {
-			this.securityCode = securityCode;
-		}
-
-		/**
-		 * 有効期限（月）を取得するメソッド
-		 * @return expirationMonth  有効期限（月）
-		 */
-		public int getExpirationMonth() {
-			return expirationMonth;
-		}
-
-		/**
-		 * 有効期限（月）を格納するメソッド
-		 * @param expirationMonth  有効期限（月）
-		 */
-		public void setExpirationMonth(int expirationMonth) {
-			this.expirationMonth = expirationMonth;
-		}
-
-		/**
-		 * 有効期限（年）を取得するメソッド
-		 * @return expirationYear 有効期限（年）
-		 */
-		public int getExpirationYear() {
-			return expirationYear;
-		}
-
-		/**
-		 * 有効期限（年）を格納するメソッド
-		 * @param expirationYear 有効期限（年）
-		 */
-		public void setExpirationYear(int expirationYear) {
-			this.expirationYear = expirationYear;
-		}
-
-		/**
-		 * セッションを取得するメソッド
-		 * @return session セッション
-		 */
-		public Map<String, Object> getSession() {
-			return session;
-		}
-
-		/**
-		 * セッションを格納するメソッド
-		 * @param session セッション
-		 */
-		public void setSession(Map<String, Object> session) {
-			this.session = session;
-		}
-
-		/**
-		 * クレジットブランドを取得するメソッド
-		 * @return creditBrand クレジットブランド
-		 */
-		public String getCreditBrand() {
-			return creditBrand;
-		}
-
-		/**
-		 * クレジットブランドを格納するメソッド
-		 * @param creditBrand クレジットブランド
-		 */
-		public void setCreditBrand(String creditBrand) {
-			this.creditBrand = creditBrand;
-		}
-
-		public ArrayList<BuyItemDTO> getCartList(){
-			return this.cartList;
-		}
-
-		public void setCartList(ArrayList<BuyItemDTO> cartList){
-			this.cartList = cartList;
-		}
-
+		if(credit_name.equals(dto.getCredit_name()) && credit_number.equals(dto.getCredit_number())
+				&& security_code.equals(dto.getSecurity_code()) && id_number.equals(dto.getId_number())){
+			result = SUCCESS;
 	}
+	session.put("credit_name",dto.getCredit_name());
+	session.put("credit_number",dto.getCredit_number());
+	session.put("securityc_code",dto.getSecurity_code());
+	session.put("id_number",dto.getId_number());
+	System.out.println(result);
+	return result;
+}
+
+	/**
+	 * @return credit_name
+	 */
+	public String getCredit_name() {
+		return credit_name;
+	}
+
+	/**
+	 * @param credit_name セットする credit_name
+	 */
+	public void setCredit_name(String credit_name) {
+		this.credit_name = credit_name;
+	}
+
+	/**
+	 * @return credit_number
+	 */
+	public String getCredit_number() {
+		return credit_number;
+	}
+
+	/**
+	 * @param credit_number セットする credit_number
+	 */
+	public void setCredit_number(String credit_number) {
+		this.credit_number = credit_number;
+	}
+
+	/**
+	 * @return security_code
+	 */
+	public String getSecurity_code() {
+		return security_code;
+	}
+
+	/**
+	 * @param security_code セットする security_code
+	 */
+	public void setSecurity_code(String security_code) {
+		this.security_code = security_code;
+	}
+
+	/**
+	 * @return id_number
+	 */
+	public String getId_number() {
+		return id_number;
+	}
+
+	/**
+	 * @param id_number セットする id_number
+	 */
+	public void setId_number(String id_number) {
+		this.id_number = id_number;
+	}
+
+	/**
+	 * @return session
+	 */
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	/**
+	 * @param session セットする session
+	 */
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+}

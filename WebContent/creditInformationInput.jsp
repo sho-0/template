@@ -10,7 +10,7 @@
 </head>
 
 <body>
-      <s:form action = "CheckCreditAction2">
+      <s:form action = "CheckCreditAction">
             <s:textfield name = "credit_name" />
             <s:textfield name  = "credit_number" />
             <s:textfield name  = "security_code" />

@@ -9,88 +9,35 @@
 	<!-- 対象のpackageを設定 -->
 	<package name="com.internousdev.template.action" extends="struts-default">
 
-		<!-- GoHomeAction -->
+		<!-- ホーム画面へ遷移 -->
 		<action name="GoHomeAction" class="com.internousdev.template.action.GoHomeAction" method="execute">
-			<result name="success">welcome.jsp</result>
+			<result name="success">index.jsp</result>
 		</action>
 
-		<!-- ツアーリストを表示 -->
+		<!-- アプリリストを表示 -->
 <action name="AppliListAction" class="com.internousdev.template.action.AppliListAction" method="execute">
-<result name="success">NewHome.jsp</result>
+<result name="success">appliList.jsp</result>
 <result name="error">error.jsp</result>
 </action>
 
-<!-- ツアー詳細を表示 -->
+<!-- アプリ詳細を表示 -->
 <action name= "AppliDetailAction" class="com.internousdev.template.action.AppliDetailAction"
 method= "execute">
-<result name= "success">productDetails.jsp</result>
+<result name= "success">appliDetail.jsp</result>
 <result name="error">error.jsp</result>
 </action>
-
-		<!-- HomeAction(削除かも)-->
-		<action name="HomeAction" class="com.internousdev.template.action.HomeAction" method="execute">
-			<result name="login">welcome.jsp</result>
-			<result name="success">buyItem.jsp</result>
-		</action>
-
-		<!-- LoginAction(削除かも)-->
-		<action name="LoginAction" class="com.internousdev.template.action.LoginAction" method="execute">
-			<result name="success">creditInformationInput.jsp</result>
-			<result name="create">userCreate.jsp</result>
-			<result name="error">login.jsp</result>
-		</action>
 
 		<!-- クレジット入力画面へ-->
 		<action name="GoCheckCreditAction" class="com.internousdev.template.action.GoCheckCreditAction" method="execute">
 			<result name="success">creditInformationInput.jsp</result>
-			<result name="back">login.jsp</result>
 		</action>
-
-		<!-- UserCreateConfirmAction(削除かも)
-		<action name="UserCreateConfirmAction" class="com.internousdev.template.action.UserCreateConfirmAction" method="execute">
-			<result name="success">userCreateConfirm.jsp</result>
-			<result name="error">userCreate.jsp</result>
-		</action>-->
-
-		<!-- UserCreateComplateAction(削除かも)
-		<action name="UserCreateComplateAction" class="com.internousdev.template.action.UserCreateComplateAction" method="execute">
-			<result name="success">userCreateComplate.jsp</result>
-		</action>-->
-
-		<!--BuyItemAction
-		<action name="BuyItemAction" class="com.internousdev.template.action.BuyItemAction" method="execute">
-			<result name="success">creditInformationInput.jsp</result>
-			<result name="error">NewHome.jsp</result>
-		</action>-->
 
 		<!-- クレジットカード情報入力アクション(が必要かも?)-->
-		<action name="CheckCreditAction2"
-      class="com.internousdev.template.action.CheckCreditAction2" method="execute">
+		<action name="CheckCreditAction"
+      class="com.internousdev.template.action.CheckCreditAction" method="execute">
       <result name="success" >payComp.jsp</result>
-      <result name="error">NewHome.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
-
-		<!-- BuyItemConfirmAction
-		<action name="BuyItemConfirmAction" class="com.internousdev.template.action.BuyItemConfirmAction" method="execute">
-			<result name="success">buyItemComplate.jsp</result>
-			<result name="back">buyItem.jsp</result>
-		</action>-->
-
-		<!-- BuyItemComplateAction-->
-		<action name="BuyItemComplateAction" class="com.internousdev.template.action.BuyItemComplateAction" method="execute">
-			<result name="success">payComp.jsp</result>
-		</action>
-
-		<!-- MyPageAction(削除かも)
-		<action name="MyPageAction" class="com.internousdev.template.action.MyPageAction" method="execute">
-			<result name="success">myPage.jsp</result>
-			<result name="error">error.jsp</result>
-		</action>-->
-
-		<!-- LogoutAction(削除かも)
-		<action name="LogoutAction" class="com.internousdev.template.action.LogoutAction" method="execute">
-			<result name="success">login.jsp</result>
-		</action>-->
 
 	</package>
 </struts>
