@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="css/payComp.css">
-<title>入り口</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<title>入口</title>
 </head>
 
 <body>
@@ -15,7 +15,11 @@
 		<jsp:include page="header.jsp" />
 	</header>
 
-<a href='<s:url action="AppliListAction"></s:url>'><s:text name="入り口"/></a>
+<!-- 入口ボタン------------------------------------------------------------------------------------------- -->
+<div class = "entranceButton">
+      <a href='<s:url action="AppliListAction"></s:url>'><img class = "iriguchi" src = img/iriguchi.jpg height="30%" width="30%"></a>
+      <h3>"入口"ボタンをクリックしてください</h3>
+</div>
 
       <!-- フッター ------------------------------>
 	<footer>
