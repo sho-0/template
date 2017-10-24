@@ -12,9 +12,9 @@ import com.internousdev.template.util.DBConnector;
 
 
 /**
- * ツアー詳細を表示するクラス
- * @author HINAKO HAGIWARA
- * @since 2017/09/13
+ * DBから商品詳細を取得するクラス
+ * @author MASAHIRO IZAWA
+ * @since 2017/10/24
  * @version 1.1
  */
 
@@ -39,14 +39,8 @@ public class AppliDetailDAO {
 				dto.setTheme(rs.getString("theme"));
 				dto.setComment(rs.getString("comment"));
 				dto.setImg(rs.getString("img"));
-				System.out.println("取得ID："+ dto.getId());
-                System.out.println("取得アイテム名：" + dto.getItem_name());
-                System.out.println("取得価格：" + dto.getItem_price());
-                System.out.println("商品詳細：" + dto.getComment());
-                System.out.println("取得画像パス：" + dto.getImg());
 
                 selectList.add(dto);
-
 			}
 
 		} catch(SQLException e) {

@@ -13,9 +13,12 @@ import com.internousdev.template.util.DBConnector;
 
 
 /**
- * @author internousdev
- *
+ * DBからクレジット情報を取得するクラス
+ * @author MASAHIRO IZAWA
+ * @since 2017/10/24
+ * @version 1.1
  */
+
 public class CreditDAO {
 	public CreditDTO select(String credit_name,String credit_number,
 			String security_code, String  id_number){
@@ -23,6 +26,7 @@ public class CreditDAO {
 		Connection con = db.getConnection();
 		CreditDTO result = new CreditDTO();
 
+		 /*SQLからクレジット情報(カラム/クレジット会社、クレジット番号、セキュリティ番号、IDナンバー)を取得*/
 		String sql = "select * from credit where credit_name=? and credit_number=? and security_code=? and id_number=?";
 
 		try{
