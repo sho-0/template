@@ -88,7 +88,7 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '左';
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -106,7 +106,7 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '右';
 }
 [dir='rtl'] .slick-next:before
 {

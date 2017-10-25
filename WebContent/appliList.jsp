@@ -15,7 +15,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
 
-<title>峠地図　関東版</title>
+<title>商品一覧</title>
 </head>
 
 
@@ -28,13 +28,15 @@
 	<h4>※マウスを乗せると詳細が表示されます</h4>
 
       <div class = "main">
+
+<!-- カルーセルスライド ------->
            <div class="main_img">
+
+<!-- 商品アイコン---------------------------------------------------------------------------------------------------------------------------------------------------- -->
                  <s:iterator value = "selectList">
                  <div class="img">
                        <figure class="imghvr-shutter-out-diag-1">
-                            <s:param name="id" value="%{1}"/><img
-                                  class="appli_img" src="<s:property value="img"/>" height="200px" width="200px">
-                                    <input type=hidden value="id" />
+                            <s:param name="img" value="%{1}"/><img class="appli_img" src="<s:property value="img"/>" height="200px" width="200px"><input type=hidden value="id" />
                                    <figcaption>
                                          <form><b>詳細</b><br>
                                                     <s:param name ="comment" value="%{1}"/><s:property value="comment"/><input type=hidden value="id" /></form>
