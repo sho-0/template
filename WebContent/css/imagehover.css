@@ -32,7 +32,7 @@
 }
 
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
-    background-color: #135796;
+    background-color: #000000;
     padding: 30px;
     position: absolute;
     top: 0;
@@ -737,7 +737,7 @@
 /* imghvr-shutter-out-*
    ----------------------------- */
 [class^='imghvr-shutter-out-']:before, [class*=' imghvr-shutter-out-']:before {
-    background: #135796;
+    background: #000000;
     position: absolute;
     content: '';
     -webkit-transition-delay: 0.105s;

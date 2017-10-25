@@ -25,6 +25,8 @@
 		<jsp:include page="header.jsp" />
 	</header>
 
+	<h4>※マウスを乗せると詳細が表示されます</h4>
+
       <div class = "main">
            <div class="main_img">
                  <s:iterator value = "selectList">
@@ -34,18 +36,14 @@
                                   class="appli_img" src="<s:property value="img"/>" height="200px" width="200px">
                                     <input type=hidden value="id" />
                                    <figcaption>
-                                         <div class = "item_price">
-                                               <s:param name="id" value="%{1}"/><s:property value="item_price"/><input type=hidden value="id" />
-                                        </div>
-                                        <div class = "comment">
-                                               <s:param name="id" value="%{1}"/><s:property value="comment"/><input type=hidden value="id" />
-                                        </div>
+                                         <form><b>詳細</b><br>
+                                                    <s:param name ="comment" value="%{1}"/><s:property value="comment"/><input type=hidden value="id" /></form>
+                                         <h3>価格:&yen;<s:param name ="item_price" value="%{1}"/><s:property value="item_price"/><input type=hidden value="id" /></h3>
                                   </figcaption>
                                        <a href='<s:url action="AppliDetailAction"><s:param name="id" value="id"/></s:url>'></a>
                         </figure>
                 </div>
                 </s:iterator>
-
       </div>
 
 		<!-- カルーセルスライドのオプション ----->
