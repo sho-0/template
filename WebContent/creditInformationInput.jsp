@@ -5,17 +5,42 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="css/productDetails.css">
+<link rel="stylesheet" type="text/css" href="css/creditInformationInput.css">
+<link rel="stylesheet" type="text/css" href="css/submitButton.css">
 <title>クレジット情報入力画面</title>
 </head>
 
 <body>
-      <s:form action = "CheckCreditAction">
-            <s:textfield name = "credit_name" />
-            <s:textfield name  = "credit_number" />
-            <s:textfield name  = "security_code" />
-            <s:textfield name  = "id_number" />
-            <s:submit value = "購入する" />
-      </s:form>
+
+<!-- ヘッダー ------------------------------>
+	<header>
+		<jsp:include page="header.jsp" />
+	</header>
+	      <s:form action = "CheckCreditAction">
+	      <table>
+	            <tr>
+	            <th>クレジット会社名</th>
+	            <td><input name="credit_name" id="CheckCreditAction" type="text" value=""></td>
+	            </tr>
+	            <tr>
+	            <th>カード番号(半角数字16桁)</th>
+	            <td><input name="credit_number" id="CheckCreditAction" type="text" value=""></td>
+	            </tr>
+	            <tr>
+	            <th>セキュリティコード(半角数字4桁)</th>
+	            <td><input name="security_code" id="CheckCreditAction4" type="password"></td>
+	            </tr>
+	            <tr>
+	            <th>ID番号(半角数字4桁)</th>
+	            <td><input name="id_number" id="CheckCreditAction4" type="text" value=""></td>
+	            </tr>
+	     </table>
+	      <input id="CheckCreditAction_0" type="submit" value="購入する" >
+	      </s:form>
+
+<!-- フッター ------------------------------>
+	<footer>
+		<jsp:include page="footer.jsp" />
+	</footer>
 </body>
 </html>

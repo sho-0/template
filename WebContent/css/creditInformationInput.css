@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+table{;
+	width:200%;
+	margin-top:4%;
+	margin-left:35%;
+}
+
+table th{
+	text-align:left;
+	padding:4%;
+	width:40%;
+}
+
+table td{
+	width:70%;
+}
+
+#CheckCreditAction{
+	height:30px;
+	width:600px;
+	font-size:110%;
+}
+
+#CheckCreditAction4{
+	height:30px;
+	width:200px;
+	font-size:110%;
+
+}
+
+footer{
+	margin-top:70%;
+}

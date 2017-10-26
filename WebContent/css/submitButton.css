@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+input#CheckCreditAction_0 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 30px;
+    font-size: 19px;
+    height: 26px;
+    line-height: 40px!;
+    vertical-align: middle;
+    background: #000000;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: .4s;
+    height:30px;
+	width:600px;
+	border-style: none;
+
+}
+
+input#CheckCreditAction_0:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 21px white;
+    border-bottom: solid 41px transparent;
+    z-index: 1;
+    transition: .4s;
+}
+
+input#CheckCreditAction_0:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 21px transparent;
+    border-bottom: solid 41px white;
+    z-index: 1;
+    transition: .4s;
+}
+
+input#CheckCreditAction_0:hover:before, input#CheckCreditAction_0:hover:after{
+    border-left-width: 25px;
+}
+
+input#CheckCreditAction_0:hover{
+    background: #000000;
+}
