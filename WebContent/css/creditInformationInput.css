@@ -21,9 +21,15 @@ table td{
 	font-size:110%;
 }
 
-#CheckCreditAction4{
+#CheckCreditAction2{
 	height:30px;
-	width:200px;
+	width:210px;
+	font-size:110%;
+}
+
+#CheckCreditAction3{
+	height:30px;
+	width:60px;
 	font-size:110%;
 }
 

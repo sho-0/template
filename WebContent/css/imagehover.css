@@ -24,6 +24,8 @@
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
+    border:solid 5px  #000000;;
+    border-radius:6px;
 }
 
 [class^='imghvr-'] > img, [class*=' imghvr-'] > img {

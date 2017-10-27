@@ -1,15 +1,22 @@
 @CHARSET "UTF-8";
 .entranceButton{
+	margin-top:14%;
 	margin-left:40%;
-	margin-top:12%;
+	height:40%;
+	width:17%;
+}
+
+h2{
+	text-align:center;
 }
 
 h3{
 	height:35%;
 	width:35%;
+	margin-left:40%;
 }
 
 footer{
-	margin-top:18%;
+	margin-top:15%;
 	wedth:100%;
 }

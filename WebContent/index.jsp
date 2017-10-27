@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/imagehover.css">
 <title>峠地図　関東版</title>
 </head>
 
@@ -17,11 +18,16 @@
 
 <!-- 入口ボタン------------------------------------------------------------------------------------------------------------------------ -->
 <div class = "entranceButton">
-      <a href='<s:url action="AppliListAction"></s:url>'><img class = "iriguchi" src = img/iriguchi.jpg height="30%" width="30%"></a>
-      <h3>"入口"ボタンをクリックしてください</h3>
+      <figure class="imghvr-shutter-out-horiz">
+      <img class = "iriguchi" src = img/iriguchi.jpg height="130px" width="100%">
+      <figcaption>
+       <h2>いらっしゃいませ</h2>
+  </figcaption>
+  <a href='<s:url action="AppliListAction"></s:url>'></a>
+</figure>
 </div>
-
-      <!-- フッター ------------------------------>
+<h3>"入口"ボタンをクリックしてください</h3>
+<!-- フッター ------------------------------>
 	<footer>
 		<jsp:include page="footer.jsp" />
 	</footer>

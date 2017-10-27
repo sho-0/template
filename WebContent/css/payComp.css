@@ -4,11 +4,19 @@ body{
 	wedth:100%;
 }
 
-h1{
+.main{
 	margin-top:15%;
 	margin-left:34%;
 }
 
+.button{
+	font-size: 19px;;
+	font-weight: bold;
+	padding: 5px 20px;
+	background-color: #000000;
+	color: #fff;
+}
+
 footer{
-	margin-top:25%
+	margin-top:15%
 }

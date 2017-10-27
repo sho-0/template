@@ -7,7 +7,8 @@
 }
 .img{
 	float:left;
-	border:solid 3px  black;
+	border:solid 5px  #000000;;
+	border-radius:6px;
 }
 
 .itemData{

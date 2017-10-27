@@ -10,11 +10,16 @@ body{
 	width:80%;
 }
 
+.appli_img{
+	height:220px;
+	width:220px;
+}
+
 form{
 	height:70%;
 	width:100%;
 }
 
 footer{
-	margin-top:16%;
+	margin-top:14%;
 }

@@ -15,7 +15,12 @@
 		<jsp:include page="header.jsp" />
 	</header>
 
+<div class = "main">
       <h1>お買い上げ、ありがとうございました。</h1>
+      <h4>※このページはブラウザバックを禁止しております。</h4>
+      <h4>　お手数ですが、こちらのボタンからお戻りください。</h4><br>
+      <a href='<s:url action="AppliListAction" />' class = "button">商品選択へ戻る</a>
+</div>
 
       <!-- フッター ------------------------------>
 	<footer>
