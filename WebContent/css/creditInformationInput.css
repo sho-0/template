@@ -25,9 +25,25 @@ table td{
 	height:30px;
 	width:200px;
 	font-size:110%;
+}
 
+input#CheckCreditAction_0 {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0 30px;
+	vertical-align: middle;
+	background: #000000;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	transition: .4s;
+	height:30px;
+	width:300px;
+	border-style: none;
+	margin-left:106%;
+	margin-top:7%;
 }
 
 footer{
-	margin-top:70%;
+	margin-top:38%;
 }

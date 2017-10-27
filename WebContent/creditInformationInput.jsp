@@ -6,7 +6,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/creditInformationInput.css">
-<link rel="stylesheet" type="text/css" href="css/submitButton.css">
 <title>クレジット情報入力画面</title>
 </head>
 
@@ -35,7 +34,7 @@
 	            <td><input name="id_number" id="CheckCreditAction4" type="text" value=""></td>
 	            </tr>
 	     </table>
-	      <input id="CheckCreditAction_0" type="submit" value="購入する" >
+	      <input id="CheckCreditAction_0" type="submit" value="購入を確定する" >
 	      </s:form>
 
 <!-- フッター ------------------------------>

@@ -5,10 +5,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>m(_ _)m Error Page... OTL</title>
+<link rel="stylesheet" type="text/css" href="css/error.css">
+<title>エラー</title>
 </head>
 <body>
-<h1>エラーが発生しました。</h1>
-<p>恐れ入りますが、<a href='<s:url action="HomeAction" />'>ログイン</a>からやり直してください。</p>
+<!-- ヘッダー ------------------------------>
+	<header>
+		<jsp:include page="header.jsp" />
+	</header>
+
+<div class = "main">
+      <h1>エラーが発生しました。</h1>
+      <p>恐れ入りますが、商品選択からやり直してください。</p>
+      <br>
+      <br>
+      <a href='<s:url action="AppliListAction" />' class = "button">商品選択へ戻る</a>
+</div>
+
+<!-- フッター ------------------------------>
+	<footer>
+		<jsp:include page="footer.jsp" />
+	</footer>
 </body>
 </html>
