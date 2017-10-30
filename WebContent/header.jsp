@@ -5,12 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/header.css">
-<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 <title>header</title>
 </head>
 <body>
 <div class="header_main">
-      <a href="AppliListAction"><img src="img/title.jpg"  width="25%"></a>
+             <a href="GoHomeAction"><img class = "title" src = img/title.jpg height="100%" width="30%"></a>
 </div>
 </body>
 </html>

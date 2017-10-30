@@ -19,12 +19,12 @@
 <!-- 入口ボタン------------------------------------------------------------------------------------------------------------------------ -->
 <div class = "entranceButton">
       <figure class="imghvr-shutter-out-horiz">
-      <img class = "iriguchi" src = img/iriguchi.jpg height="130px" width="100%">
+             <img class = "iriguchi" src = img/iriguchi.jpg height="120px" width="260px">
       <figcaption>
-       <h2>いらっしゃいませ</h2>
-  </figcaption>
-  <a href='<s:url action="AppliListAction"></s:url>'></a>
-</figure>
+             <h2>いらっしゃいませ</h2>
+     </figcaption>
+             <a href="AppliListAction"></a>
+      </figure>
 </div>
 <h3>"入口"ボタンをクリックしてください</h3>
 <!-- フッター ------------------------------>

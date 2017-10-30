@@ -6,10 +6,23 @@
 <!-- Strutsの詳細設定 -->
 <struts>
 	<constant name="struts.devMode" value="true" />
+
+	<!--国際化  -->
+	<constant name="struts.custom.il18n.resources"
+	value=
+	           "com.internousdev.template.property.appliDetail"
+	           />
+
 	<!-- 対象のpackageを設定 -->
 	<package name="com.internousdev.template.action" extends="struts-default">
 
-		<!-- アプリリストを表示 -->
+<!-- 入口へ戻る -->
+<action name="GoHomeAction" class="com.internousdev.template.action.GoHomeAction" method="execute">
+<result name="success">index.jsp</result>
+<result name="error">error.jsp</result>
+</action>
+
+<!-- アプリリストを表示 -->
 <action name="AppliListAction" class="com.internousdev.template.action.AppliListAction" method="execute">
 <result name="success">appliList.jsp</result>
 <result name="error">error.jsp</result>
