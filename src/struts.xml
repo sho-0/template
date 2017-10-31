@@ -8,10 +8,14 @@
 	<constant name="struts.devMode" value="true" />
 
 	<!--国際化  -->
-	<constant name="struts.custom.il18n.resources"
-	value=
-	           "com.internousdev.template.property.appliDetail"
-	           />
+	<constant name="struts.custom.i18n.resources"
+	value="com.internousdev.template.property.appliDetail
+	            com.internousdev.template.property.appliList
+	            com.internousdev.template.property.creditInformationInput
+	            com.internousdev.template.property.index
+	            com.internousdev.template.property.payComp
+	            com.internousdev.template.property.error"
+	            />
 
 	<!-- 対象のpackageを設定 -->
 	<package name="com.internousdev.template.action" extends="struts-default">
