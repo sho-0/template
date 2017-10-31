@@ -7,11 +7,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- cssリンク---------------------------------------------- -->
 <link rel="stylesheet" type="text/css" href="css/error.css">
 
+<!-- 国際化--------------------------------------------------------- -->
 <fmt:setLocale value="${pageContext.request.locale.language}" />
 <fmt:setBundle basename="com.internousdev.template.property.error"
 var="lang" />
+
 <title><s:text name="lang.error.error"/></title>
 </head>
 <body>
