@@ -97,7 +97,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 商品IDを取得
-	 * @return tour_id ツアーID
+	 * @return id 商品ID
 	 */
 	public int getId() {
 		return id;
@@ -105,7 +105,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 商品IDを格納
-	 * @param tour_id ツアーID
+	 * @param id 商品ID
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -113,7 +113,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 商品名を取得
-	 * @return tour_name ツアー名
+	 * @return item_name 商品名
 	 */
 	public String getIm_name() {
 		return item_name;
@@ -121,7 +121,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 商品名を格納
-	 * @param tour_name ツアー名
+	 * @param item_name 商品名
 	 */
 	public void setItem_name(String item_name) {
 		this.item_name = item_name;
@@ -129,7 +129,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 価格を取得
-	 * @return price 価格
+	 * @return item_price 価格
 	 */
 	public BigDecimal getItem_price() {
 		return item_price;
@@ -137,7 +137,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 価格を格納
-	 * @oaram price 価格
+	 * @oaram item_price 価格
 	 */
 	public void setItem_price(BigDecimal item_price) {
 		this.item_price = item_price;
@@ -161,7 +161,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 商品詳細文を取得
-	 * @return comment ツアー詳細文
+	 * @return comment 商品詳細文
 	 */
 	public String getComment() {
 		return comment;
@@ -169,7 +169,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * 商品詳細文を格納
-	 * @param comment ツアー詳細文
+	 * @param comment 商品詳細文
 	 */
 	public void setComment(String comment) {
 		this.comment = comment;
@@ -193,7 +193,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
     /**
      * 商品一覧表示用リストを取得
-     * @return displayList 商品一覧表示用リスト
+     * @return selectList 商品一覧表示用リスト
      */
     public ArrayList<AppliDTO> getSelectList() {
         return  selectList;
@@ -201,7 +201,7 @@ public class AppliDetailAction extends ActionSupport implements SessionAware {
 
     /**
      * 商品一覧表示用リストを格納
-     * @param displayList 商品一覧表示用リスト
+     * @param selectList 商品一覧表示用リスト
      */
     public void setSelectList(ArrayList<AppliDTO> selectList) {
         this. selectList =  selectList;

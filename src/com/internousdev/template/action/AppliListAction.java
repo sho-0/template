@@ -81,7 +81,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 商品IDを取得
-     * @return item_id 商品ID
+     * @return id 商品ID
      */
     public int getId() {
         return id;
@@ -89,7 +89,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 商品IDを格納
-     * @param tour_id ツアーID
+     * @param id 商品ID
      */
     public void setId(int id) {
         this.id = id;
@@ -97,7 +97,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 商品名を取得
-     * @return tourName ツアー名
+     * @return item_name 商品名
      */
     public String getItem_name() {
         return item_name;
@@ -105,7 +105,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 商品名を格納
-     * @param tour_name ツアー名
+     * @param item_name 商品名
      */
     public void setItem_name(String item_name) {
         this.item_name = item_name;
@@ -113,7 +113,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * テーマを取得
-     * @return thema テーマ
+     * @return theme テーマ
      */
     public String getTheme() {
         return theme;
@@ -129,7 +129,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 価格を格納
-     * @param region 地方*/
+     * @param price 価格*/
 
     public int getPrice() {
         return price;
@@ -161,7 +161,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 商品詳細を取得
-     * @return img 画像パス
+     * @return icomment 商品詳細
      */
     public String getComment() {
         return comment;
@@ -169,7 +169,7 @@ public class AppliListAction extends ActionSupport {
 
     /**
      * 商品詳細を格納
-     * @param img 画像パス
+     * @param comment 商品詳細
      */
     public void setComment(String comment) {
         this.comment = comment;

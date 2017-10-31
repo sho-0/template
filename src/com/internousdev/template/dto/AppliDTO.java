@@ -51,7 +51,7 @@ public class AppliDTO {
 
 	/**
 	 * 商品IDを取得するメソッド
-	 * @return tour_id 商品ID
+	 * @return id 商品ID
 	 */
 	public int getId() {
 		return id;
@@ -59,7 +59,7 @@ public class AppliDTO {
 
 	/**
 	 * 商品IDを格納
-	 * @param tour_id 商品ID
+	 * @param id 商品ID
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -67,7 +67,7 @@ public class AppliDTO {
 
 	/**
 	 * 商品名を取得
-	 * @return tour_name 商品名
+	 * @return item_name 商品名
 	 */
 	public String getItem_name() {
 		return item_name;
@@ -75,7 +75,7 @@ public class AppliDTO {
 
 	/**
 	 * 商品名を格納
-	 * @param tour_name 商品名
+	 * @param item_name 商品名
 	 */
 	public void setItem_name(String item_name) {
 		this.item_name = item_name;
