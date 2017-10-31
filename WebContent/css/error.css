@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 .main{
 	margin-top:13%;
-	margin-left:37%;
+	text-align:center;
 }
 
 .button{
@@ -10,7 +10,6 @@
 	padding: 5px 20px;
 	background-color: #000000;
 	color: #fff;
-	margin-left:7%;
 }
 
 footer{
